@@ -1,0 +1,21 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+.titleContainer{
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	box-sizing: content-box;
+	height: auto;
+	border-radius: 30px;
+	border: 10px solid silver;
+	border-style: inset;
+	background-color: aqua;
+}
+
+.titleContainer {
+	font-family: 'Pacifico', cursive;
+	color: rgb(7, 68, 48);
+	font-size: 30px;
+}

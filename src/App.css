@@ -1,0 +1,17 @@
+body{
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	background-color: rgb(107, 189, 155);
+}
+
+.App {
+}
+
+.mainContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	grid-template-rows: 100px 700px;
+	justify-content: center;
+}

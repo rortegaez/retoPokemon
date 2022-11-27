@@ -1,0 +1,26 @@
+
+.card{
+	background-color: rgb(197, 195, 52);
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: center;
+	width: 260px;
+	height: 300px;
+	border: 5px solid silver;
+	border-style: outset;
+	border-radius: 20px;
+	box-shadow: 3px 3px 5px;
+
+}
+
+
+img{
+	width: 200px;
+	height: 200px;
+}
+
+.title {
+	color: rgb(103, 98, 131);
+	text-decoration: underline;
+}
