@@ -1,44 +1,33 @@
 
 import React, { useEffect, useState } from 'react'
+
 import './card.css'
+
+import getPokemon from '../Function/getPokemon'
+import namePokemon from '../Function/namePokemon'
+import getNumber from '../Function/getNumber'
+import getTypes from '../Function/getTypes'
 
 const Card = () => {
 
 	const [ url, setUrl ] = useState()
 	const [ name, setName ] = useState()
+	const [ type, setTypes ] = useState()
 
-	useEffect(() =>{
+	useEffect(() => {
 
 		getPokemon(number).then(element => setUrl(element))
-		namePokemon(number).then(obj => setName(obj))
+		namePokemon(number).then(element => setName(element))
+		getTypes(number).then(element => setTypes(element))		
 	
-	}, [])
+	},[])
 
-	const getPokemon = async(num) => {
-		const raw = await fetch(`https://pokeapi.co/api/v2/pokemon/${num}`)
-		const character = await raw.json()
-		const url = character['sprites']['other']['official-artwork']['front_default']
-		return url			
-	}
-
-	const namePokemon = async(num) => {
-		const raw = await fetch(`https://pokeapi.co/api/v2/pokemon/${num}`)
-		const character = await raw.json()
-		const name = character['species']['name']
-		return name
-	}
-	console.log('nombre', namePokemon())
-
-	const getNumber = () => {
-		return Math.round(Math.random()*101)
-	}
-
-	const number = getNumber()
+	const number = getNumber()		
 	
 	return <>
-	<div className='card'>
+	<div className='mainCard' id = { type }>
 		<h1 className='title'>{ name }</h1>
-		<img src={ url } alt='' className='cardBody'></img>
+		<img src= { url } alt= { name } className='cardBody'></img>
 	</div>
 	</>
 }

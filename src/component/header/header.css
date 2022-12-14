@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
 
 
 .titleContainer{
@@ -11,11 +11,10 @@
 	border-radius: 30px;
 	border: 10px solid silver;
 	border-style: inset;
-	background-color: aqua;
+	background-color: rgb(159, 201, 111);
 }
 
-.titleContainer {
-	font-family: 'Pacifico', cursive;
-	color: rgb(7, 68, 48);
-	font-size: 30px;
+.titlePokemon {
+	font-family: 'Nabla', cursive;
+	font-size: 3em;
 }

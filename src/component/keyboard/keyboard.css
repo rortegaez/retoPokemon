@@ -7,7 +7,7 @@
 	grid-template-columns: repeat(3, 1fr);
 	justify-items: center;
 	align-items: center;
-	background-color: aqua;
+	background-color: rgb(159, 201, 111);
 	border: 10px solid silver;
 border-style: inset;
 }
