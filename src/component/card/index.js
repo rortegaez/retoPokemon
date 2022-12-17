@@ -20,7 +20,7 @@ const Card = () => {
 		namePokemon(number).then(element => setName(element))
 		getTypes(number).then(element => setTypes(element))		
 	
-	},[])
+	}, [])
 
 	const number = getNumber()		
 	
