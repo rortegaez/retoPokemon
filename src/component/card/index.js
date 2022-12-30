@@ -26,6 +26,7 @@ const Card = () => {
 	
 	return <>
 	<div className='mainCard' id = { type }>
+		{/* en el css tenemos #(tipo de pokemon) por cada type, asi que según el type que sea cambia el color del bakcground. */}
 		<h1 className='title'>{ name }</h1>
 		<img src= { url } alt= { name } className='cardBody'></img>
 	</div>

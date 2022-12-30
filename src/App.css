@@ -5,9 +5,6 @@ body{
 	background-color: rgb(107, 189, 155);
 }
 
-.App {
-}
-
 .mainContainer {
 	display: flex;
 	flex-direction: column;
