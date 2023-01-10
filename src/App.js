@@ -3,6 +3,7 @@ import './App.css';
 import Keyboard from './component/keyboard'
 import Header from './component/header'
 
+//import { toast } from 'react-toastify'
 
 function App() {
 
@@ -16,4 +17,4 @@ function App() {
   );
 }
 
-export default App;
+export default App
