@@ -1,30 +1,31 @@
-
-:root {
-	--background: #c2d669;
-}
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap');
 
 .mainCard{
-	/*background: var(--background);*/
+	font-family: 'Shantell Sans', cursive;
+	color: #0f0b9d;
 	display: flex;
 	flex-direction: column;
 	text-align: center;
 	justify-content: center;
-	height: 300px;
+	height: 200px;
 	padding: 1em;
 	border: 5px solid silver;
 	border-style: outset;
 	border-radius: 20px;
-	box-shadow: 3px 3px 5px;
+	box-shadow: 3px 3px 5px #000000;
+	
+	&:hover{
+		box-shadow: 3px 3px 5px yellow;
+	}
+	&:active{
+		border-style: inset;
+		box-shadow: 3px 3px 5px red;
+	}
 }
 
-.cardBody {
-	width: 200px;
-	height: 200px;
-}
-
-.title {
-	color: rgb(219, 215, 215);
-	text-decoration: underline;
+.imgPokemon{
+	width: 150px;
+	height: 150px;
 }
 
 #normal{

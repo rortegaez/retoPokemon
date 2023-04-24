@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap');
+
+
+.containerBtn {
+	font-family: 'Shantell Sans', cursive;
+	font-size: 2em;
+	padding: 0.5em;
+	color: #e3e317;
+	background-color: #da16b6;
+	font-weight: bold;
+	height: 60px;
+	width: 120px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: center;
+	border: 5px solid silver;
+	border-style: outset;
+	border-radius: 20px;
+	box-shadow: 3px 3px 5px #000000;
+
+	&:hover{
+		background-color: #f598e4;
+	}
+	&:active{
+		border-style: inset;
+		box-shadow: 3px 3px 5px red;
+	}
+}
