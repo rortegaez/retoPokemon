@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap');
 
 
 .titleContainer{
@@ -15,6 +15,7 @@
 }
 
 .titlePokemon {
-	font-family: 'Nabla', cursive;
+	font-family: 'Shantell Sans', cursive;
+	color: #494e08;
 	font-size: 3em;
 }

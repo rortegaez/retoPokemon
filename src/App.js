@@ -1,17 +1,14 @@
+// import componets
+import Header from "./component/layout/Header/index.js";
+import Keyboard from "./component/layout/Keyboard/index.js";
 
-import './App.css';
-import Keyboard from './component/keyboard'
-import Header from './component/header'
-
-
+// import styles
+import "./app.css";
 function App() {
-
   return (
-    <div className="App">
-			<div className='mainContainer'>
-				<Header className='header' />
-				<Keyboard className='keyboard' />
-			</div>
+    <div className="mainContainer">
+      <Header className="header" />
+      <Keyboard className="keyboard" />
     </div>
   );
 }

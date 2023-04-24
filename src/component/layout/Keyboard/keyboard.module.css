@@ -1,4 +1,4 @@
-.cardContainer{
+.mainContainer{
 	display: grid;
 	box-sizing: content-box;
 	padding: 30px;
@@ -9,7 +9,12 @@
 	align-items: center;
 	background-color: rgb(159, 201, 111);
 	border: 10px solid silver;
-border-style: inset;
+	border-style: inset;
+}
+
+.contBtn{
+	grid-row: 3/4;
+	grid-column: 2/3;
 }
 
 
