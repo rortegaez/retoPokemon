@@ -34,7 +34,10 @@ const Keyboard = () => {
           <Card key={index} props={item.data} />
         ))}
         <div className={styles.contBtn}>
-          <ButtonRefresh handleRefresh={handleRefrest} />
+          <ButtonRefresh
+            handleRefresh={handleRefrest}
+            className={styles.contBtn}
+          />
         </div>
       </div>
     </>

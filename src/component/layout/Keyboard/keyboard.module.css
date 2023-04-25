@@ -1,6 +1,7 @@
 .mainContainer{
 	display: grid;
 	box-sizing: content-box;
+	width: auto;
 	padding: 30px;
 	border-radius: 30px;
 	gap: 10px;
@@ -11,10 +12,25 @@
 	border: 10px solid silver;
 	border-style: inset;
 }
-
 .contBtn{
 	grid-row: 3/4;
 	grid-column: 2/3;
+}
+
+@media only screen and (max-width: 660px) {
+	.mainContainer{
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.contBtn{
+		grid-row: 4/5;
+	}
+}
+
+@media only screen and (max-width: 200px){
+	.mainContainer{
+		display: flex;
+		flex-direction: column;		
+	}
 }
 
 

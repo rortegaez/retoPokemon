@@ -4,10 +4,12 @@
 
 .titleContainer{
 	display: flex;
+	align-items: center;
 	text-align: center;
 	justify-content: center;
 	box-sizing: content-box;
-	height: auto;
+	height: 10vh;
+	width: auto;
 	border-radius: 30px;
 	border: 10px solid silver;
 	border-style: inset;
@@ -18,4 +20,16 @@
 	font-family: 'Shantell Sans', cursive;
 	color: #494e08;
 	font-size: 3em;
+}
+
+@media only screen and (max-width: 660px) {
+	.titlePokemon{
+		font-size: 2em;
+	}
+}
+
+@media only screen and (max-width: 200px){
+	.titlePokemon{
+		font-size: 1em;
+	}
 }

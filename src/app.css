@@ -7,8 +7,8 @@ body{
 
 .mainContainer {
 	display: flex;
+/* 	width: 80%; */
 	flex-direction: column;
 	gap: 10px;
-	grid-template-rows: 100px 700px;
 	justify-content: center;
 }
