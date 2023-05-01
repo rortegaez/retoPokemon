@@ -27,6 +27,8 @@ const Keyboard = () => {
     fetchPoke();
   }, [handle]);
 
+  console.log(list)
+
   return (
     <>
       <div className={styles.mainContainer}>
