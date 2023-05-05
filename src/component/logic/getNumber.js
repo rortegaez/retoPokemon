@@ -1,6 +1,8 @@
+import { SIZE } from "../constans.js";
+
 const getNumber = () => {
   let number = [];
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < SIZE; i++) {
     const result = Math.round(Math.random() * 905);
     number = [...number, result];
   }
