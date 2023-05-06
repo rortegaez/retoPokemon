@@ -17,29 +17,16 @@ const Keyboard = () => {
   const [handle, setHandle] = useState(true);
 
   //pendiente de finalizar la lógica, cuando se pulse el botón, cuando se pulse SIZE diferentes saltará el confetti
-  const checks = (id) => {
-    const pass = SIZE;
-    let numberId = [];
-    console.log(numberId);
-    console.log(id);
-    console.log(numberId.includes(id));
-    /*
-		- se hace un include
-		- si es false, se añada al array; si es true ignoramos, porque se habrá pulsado sobre algo ya pulsado
-		- así hasta que numberId tenga los mismo elementos que SIZE
-		- cuando se igualen debe de salir el confetti
-		*/
-    /* if (pass === numberId.length) {
-      confetti();
-    } else {
-      numberId.includes(id) ? null : (numberId = [...numberId, id]);
-    } */
 
-    if (!numberId.includes(id) === true) {
-      console.log("primero");
+  let numberId = [];
+  let pass = 0;
+  const checks = (id) => {
+    if (!numberId.includes(id)) {
       numberId = [...numberId, id];
-    } else if (pass === numberId.length) {
-      console.log("segundo");
+      pass = pass + 1;
+    }
+
+    if (pass === SIZE) {
       confetti();
     }
   };

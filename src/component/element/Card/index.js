@@ -1,16 +1,15 @@
 import "./card.css";
 
-const Card = ({ props, checks, id }) => {
-  console.log(id);
+const Card = ({ props, checks }) => {
+  //console.log(id);
   const name = props.species.name;
   const synth = window.speechSynthesis;
-  const number = id;
   const utterThis = new SpeechSynthesisUtterance(name);
   utterThis.lang = "es-ES";
 
   const utilities = () => {
     synth.speak(utterThis);
-    checks(id);
+    checks();
   };
 
   let type = props.types[0].type.name;
