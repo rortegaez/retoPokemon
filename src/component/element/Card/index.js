@@ -8,7 +8,7 @@ const Card = ({ props, checks, id }) => {
   const utterThis = new SpeechSynthesisUtterance(name);
   utterThis.lang = "es-ES";
 
-  const utility = () => {
+  const utilities = () => {
     synth.speak(utterThis);
     checks(id);
   };
@@ -18,7 +18,7 @@ const Card = ({ props, checks, id }) => {
   return (
     <>
       <div className="mainCard" id={`${type}`}>
-        <div id={`${type}`} onClick={utility}>
+        <div id={`${type}`} onClick={utilities}>
           <h1>{props.species.name}</h1>
           <img
             src={props.sprites.other.home.front_default}
