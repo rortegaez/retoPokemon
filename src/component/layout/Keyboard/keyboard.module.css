@@ -1,16 +1,23 @@
 .mainContainer{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: 10px solid silver;
+	border-style: inset;
+	border-radius: 30px;
+	background-color: rgb(159, 201, 111);
+}
+
+.keyboards{
 	display: grid;
 	box-sizing: content-box;
 	width: auto;
 	padding: 30px;
-	border-radius: 30px;
 	gap: 10px;
 	grid-template-columns: repeat(3, 1fr);
 	justify-items: center;
 	align-items: center;
-	background-color: rgb(159, 201, 111);
-	border: 10px solid silver;
-	border-style: inset;
 }
 .contBtn{
 	grid-row: 3/4;
