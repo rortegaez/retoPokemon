@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 // import components
 import Card from "../../element/Card";
 import ButtonRefresh from "../../buttons/ButtonRefresh";
-import { SIZE } from "../../constans.js";
+import { SIZEWHATS } from "../../constans.js";
 import confetti from "canvas-confetti";
 
 // import styles
@@ -26,13 +26,13 @@ const Keyboard = () => {
       pass = pass + 1;
     }
 
-    if (pass === SIZE) {
+    if (pass === SIZEWHATS) {
       confetti();
     }
   };
 
   const fetchPoke = async () => {
-    const pokes = await fetchPokemon();
+    const pokes = await fetchPokemon(SIZEWHATS);
     setList(pokes);
   };
 

@@ -1,6 +1,6 @@
 import "./header.css";
 
-const Header = () => {
+const HeaderWhats = () => {
   return (
     <div className="titleContainer">
       <h1 className="titlePokemon">¿Cuál es el Pokemon?</h1>
@@ -9,4 +9,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderWhats;
