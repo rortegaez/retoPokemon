@@ -47,15 +47,18 @@ const Keyboard = () => {
   return (
     <>
       <div className={styles.mainContainer}>
-        {list.map((item, index) => (
-          <Card
-            key={index}
-            // si quiero utilizar el identificador del index, debo de enviarlo como un elemento diferente que la key
-            id={index}
-            props={item.data}
-            checks={() => checks(index)}
-          />
-        ))}
+        <div className={styles.keyboards}>
+          {list.map((item, index) => (
+            <Card
+              key={index}
+              // si quiero utilizar el identificador del index, debo de enviarlo como un elemento diferente que la key
+              id={index}
+              props={item.data}
+              checks={() => checks(index)}
+            />
+          ))}
+        </div>
+
         <div className={styles.contBtn}>
           <ButtonRefresh
             handleRefresh={handleRefrest}
