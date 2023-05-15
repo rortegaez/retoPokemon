@@ -1,3 +1,2 @@
-
-export const SIZEWHATS = 9;
+export const SIZEWHATS = 3;
 export const SIZEFIND = 4;

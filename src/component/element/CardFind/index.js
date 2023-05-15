@@ -1,17 +1,12 @@
-import "./card.css";
+import React from "react";
 
-const Card = ({ props, checks }) => {
+const CardFind = ({ props, check }) => {
   const name = props.species.name;
-  const synth = window.speechSynthesis;
-  const utterThis = new SpeechSynthesisUtterance(name);
-  utterThis.lang = "es-ES";
+  let type = props.types[0].type.name;
 
   const utilities = () => {
-    synth.speak(utterThis);
-    checks();
+    check(name);
   };
-
-  let type = props.types[0].type.name;
 
   return (
     <>
@@ -29,4 +24,4 @@ const Card = ({ props, checks }) => {
   );
 };
 
-export default Card;
+export default CardFind;
