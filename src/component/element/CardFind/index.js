@@ -1,11 +1,13 @@
 import React from "react";
 
-const CardFind = ({ props, check }) => {
+const CardFind = ({ props, check, see }) => {
   const name = props.species.name;
   let type = props.types[0].type.name;
+  const numberPok = props.id;
 
   const utilities = () => {
-    check(name);
+    see();
+    check(numberPok);
   };
 
   return (
