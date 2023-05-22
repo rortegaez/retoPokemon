@@ -31,7 +31,7 @@ const KeyboardFind = () => {
     setChecking(segundPok);
   };
 
-  console.log("handle checking", checking);
+  // console.log("handle checking", checking);
   // console.log("handle number", number);
 
   //--------------------------------------------
