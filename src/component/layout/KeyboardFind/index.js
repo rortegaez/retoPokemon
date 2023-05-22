@@ -14,29 +14,59 @@ import styles from "./keyboardfind.module.css";
 
 const KeyboardFind = () => {
   const [list, setList] = useState([]);
-  const [see, setSee] = useState(false);
-  const [checking, setChecking] = useState(null);
+  const [checking, setChecking] = useState([]);
+  const [idx, setIdx] = useState([]);
+  const [number, setNumber] = useState(0);
+
+  //gestión array para checking
+  const handleAddPokemon = async (numberPok) => {
+    const newPok = numberPok;
+    setChecking([...checking, newPok]);
+  };
+
+  const handleRemovePok = async (numberPok) => {
+    const newPok = checking.filter((pok) => pok !== numberPok);
+    setChecking(newPok);
+    const segundPok = checking.filter((pok) => pok !== number);
+    setChecking(segundPok);
+  };
+
+  console.log("handle checking", checking);
+  // console.log("handle number", number);
+
+  //--------------------------------------------
 
   const fetchPoke = async () => {
     const pokes = await fetchPokFind(SIZEFIND);
     setList(pokes);
   };
 
-  const checkSee = () => {
-    setSee(!see);
-  };
-
-  const check = (ident) => {
-    if (!see) {
-      setChecking(ident);
-    } else {
-      if (checking === ident) {
+  const check = (numberPok) => {
+    if (checking.length === 0) {
+      handleAddPokemon(numberPok);
+      setNumber(numberPok);
+    } else if (checking.length % 2 !== 0) {
+      if (checking.includes(numberPok)) {
         console.log("win");
+        handleAddPokemon(numberPok);
+        setNumber(null);
       } else {
-        setChecking(null);
+        handleRemovePok(numberPok);
+        setNumber(null);
         console.log("looser");
       }
+    } else {
+      handleAddPokemon(numberPok);
+      setNumber(numberPok);
+      console.log("seguir");
     }
+
+    if (checking.length + 1 === SIZEFIND * 2) {
+      console.log("The Winner");
+      setChecking(null);
+    }
+    console.log(checking.length);
+    console.log(SIZEFIND * 2);
   };
 
   useEffect(() => {
@@ -51,10 +81,11 @@ const KeyboardFind = () => {
           <CardFind
             key={index}
             id={index}
-            props={item.data}
+            props={item.data} //todos los datos de cada pokemon
             classname={styles.cardKeyboardFind}
-            check={check}
-            see={checkSee}
+            check={check} //función para comprobar si el pokemon, ya esta seleccionado y logica de ganar
+            checking={checking} // para comprobar si hay elementos igual a numberPok
+            idx={idx} //para tener el número único de id
           />
         ))}
       </div>

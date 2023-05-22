@@ -1,0 +1,27 @@
+[33m7ef25ac[m[33m ([m[1;36mHEAD -> [m[1;32mfeature/play-card[m[33m, [m[1;31morigin/feature/play-card[m[33m)[m add pruebas
+[33m68231a5[m logic pair ok
+[33mceba016[m logic ok, pdte cleanning
+[33mafa60c9[m middle
+[33mcd3f220[m algofitmo fisher-yates sobre card
+[33m498077d[m change names, beginning index keyboardfind
+[33md16580a[m before merge from main
+[33md9d5476[m prepare new work
+[33m25a0f21[m Merge branch 'feature/play-card' of https://github.com/rortegaez/retoPokemon
+[33mb764f5b[m route to findpokemon
+[33mc23c8d9[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m Merge pull request #2 from rortegaez/improve/css-more-SIZE
+[33m3a6a803[m[33m ([m[1;31morigin/improve/css-more-SIZE[m[33m)[m solve css SIZE
+[33m26fafe3[m finish confetti
+[33m457788f[m try
+[33me184ff9[m wordking confetti
+[33med12c2b[m deleted useless
+[33m35a4bd7[m deleted old components
+[33mf6a2492[m include media query
+[33m137528e[m error https
+[33m1b591ff[m Merge pull request #1 from rortegaez/feature/ideas-for-Ulises
+[33md623bd7[m[33m ([m[1;31morigin/feature/ideas-for-Ulises[m[33m)[m final who is pokemon
+[33m7f07410[m add env in gitignore
+[33m50bf9b5[m[33m ([m[1;33mtag: v1.0[m[33m)[m delete no functional
+[33m62ac2eb[m[33m ([m[1;33mtag: 1.0[m[33m)[m corrección errores mínimos
+[33m592f82f[m movimiento directorio
+[33mac02d2f[m funcionalidad ok, pdte más cosas
+[33mff883b7[m finalizado, pdte extras

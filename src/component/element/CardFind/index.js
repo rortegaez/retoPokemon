@@ -1,18 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 
-const CardFind = ({ props, check, see }) => {
-  const name = props.species.name;
-  let type = props.types[0].type.name;
+//import styles
+import "./cardfind.css";
+
+const CardFind = ({ props, check, checking, idx, id }) => {
   const numberPok = props.id;
+  const ident = id;
+  let type = props.types[0].type.name;
+
+  const isSelected = numberPok === checking && idx === ident;
 
   const utilities = () => {
-    see();
-    check(numberPok);
+    check(numberPok, ident);
   };
 
   return (
     <>
-      <div className="mainCard" id={`${type}`}>
+      <div
+        className={`mainCard ${isSelected ? "selected" : ""}`}
+        id={`${type}`}
+      >
         <div id={`${type}`} onClick={utilities}>
           <h1>{props.species.name}</h1>
           <img
