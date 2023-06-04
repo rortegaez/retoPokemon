@@ -1,22 +1,26 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+
+// import customHooks
+import { usePok } from "../../customHooks/usePok.js";
 
 //import constante
 import { SIZEFIND } from "../../constans.js";
 
 //import components
 import ButtonRefresh from "../../buttons/ButtonRefresh/index.jsx";
-import fetchPokFind from "../../logic/fetchPokFind.js";
 import CardFind from "../../element/CardFind/index.js";
 
 //import styles
 import styles from "./keyboardfind.module.css";
 
 const KeyboardFind = () => {
-  const [list, setList] = useState([]);
-  const [checking, setChecking] = useState([]);
-  const [idx, setIdx] = useState([]);
-  const [number, setNumber] = useState(0);
+  const [checking, setChecking] = useState([]); //checkeando si se ha acertado
+  const [select, setSelect] = useState([]); //añadimos los index, que pulsamos
+  const [number, setNumber] = useState(0); //añadimos el number del pokemon para poder hacer el include en el checking
+  const [win, setWin] = useState(false); // para cambiar el estado, si se llega a ser ganador
+  const [winner, setWinner] = useState([]); // donde guardamos los elementos que deben de quedar sin poder usar
+  const { list } = usePok();
 
   //gestión array para checking
   const handleAddPokemon = async (numberPok) => {
@@ -31,15 +35,9 @@ const KeyboardFind = () => {
     setChecking(segundPok);
   };
 
-  // console.log("handle checking", checking);
-  // console.log("handle number", number);
-
   //--------------------------------------------
 
-  const fetchPoke = async () => {
-    const pokes = await fetchPokFind(SIZEFIND);
-    setList(pokes);
-  };
+  // lógica para comprobar si se gana y victoria final
 
   const check = (numberPok) => {
     if (checking.length === 0) {
@@ -48,6 +46,7 @@ const KeyboardFind = () => {
     } else if (checking.length % 2 !== 0) {
       if (checking.includes(numberPok)) {
         console.log("win");
+        setWin(!win);
         handleAddPokemon(numberPok);
         setNumber(null);
       } else {
@@ -65,13 +64,42 @@ const KeyboardFind = () => {
       console.log("The Winner");
       setChecking(null);
     }
-    console.log(checking.length);
-    console.log(SIZEFIND * 2);
   };
 
-  useEffect(() => {
-    fetchPoke();
-  }, []);
+  //--------------------------------------------------
+
+  // logicá para que lo elementos cambien cuando se esta eligiendo el par
+
+  const handleRemoveIndex = () => {
+    setSelect([]);
+  };
+
+  const handleAddIndex = async (ident) => {
+    const newIdent = ident;
+    setSelect([...select, newIdent]);
+  };
+
+  const changeIndex = async () => {
+    let numberWin = [...select];
+    setWinner([...winner, numberWin]);
+  };
+
+  const checkIndex = (ident) => {
+    console.log("win", win);
+    if (select.length === 0) {
+      handleAddIndex(ident);
+    } else if (select.length !== 0) {
+      handleAddIndex(ident);
+      if (win === true) {
+        console.log("dentro de win", win);
+        changeIndex();
+        setWin(!win);
+        setTimeout(handleRemoveIndex, 500);
+      }
+    }
+  };
+
+  //----------------------------------------------
 
   return (
     <div>
@@ -80,12 +108,13 @@ const KeyboardFind = () => {
         {list.map((item, index) => (
           <CardFind
             key={index}
-            id={index}
+            ident={index}
             props={item.data} //todos los datos de cada pokemon
             classname={styles.cardKeyboardFind}
             check={check} //función para comprobar si el pokemon, ya esta seleccionado y logica de ganar
             checking={checking} // para comprobar si hay elementos igual a numberPok
-            idx={idx} //para tener el número único de id
+            select={select}
+            checkIndex={checkIndex}
           />
         ))}
       </div>

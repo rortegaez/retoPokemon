@@ -1,17 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
+
+// import custom hooks
 
 //import styles
 import "./cardfind.css";
 
-const CardFind = ({ props, check, checking, idx, id }) => {
+const CardFind = ({ props, checkIndex, select, ident, check }) => {
   const numberPok = props.id;
-  const ident = id;
   let type = props.types[0].type.name;
 
-  const isSelected = numberPok === checking && idx === ident;
+  const isSelected = select.includes(ident);
 
   const utilities = () => {
-    check(numberPok, ident);
+    check(numberPok);
+    checkIndex(ident);
   };
 
   return (
@@ -20,7 +22,7 @@ const CardFind = ({ props, check, checking, idx, id }) => {
         className={`mainCard ${isSelected ? "selected" : ""}`}
         id={`${type}`}
       >
-        <div id={`${type}`} onClick={utilities}>
+        <div id="card" onClick={utilities}>
           <h1>{props.species.name}</h1>
           <img
             src={props.sprites.other.home.front_default}
