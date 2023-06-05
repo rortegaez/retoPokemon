@@ -13,7 +13,7 @@ const CardFind = ({ props, checkIndex, select, ident, check }) => {
 
   const utilities = () => {
     check(numberPok);
-    checkIndex(ident);
+    //checkIndex(ident);
   };
 
   return (
