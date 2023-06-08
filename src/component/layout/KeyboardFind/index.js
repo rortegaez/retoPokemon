@@ -1,3 +1,5 @@
+// funciona el deshabilitar el botón, pero hay un problemas de retarto
+
 import React from "react";
 
 // import customHooks
@@ -15,7 +17,7 @@ import styles from "./keyboardfind.module.css";
 
 const KeyboardFind = () => {
   const { list } = usePok();
-  const { check, solved, checking, selectId } = useCheck();
+  const { check, solved, selectId } = useCheck();
 
   //----------------------------------------------
 
@@ -31,7 +33,6 @@ const KeyboardFind = () => {
             classname={styles.cardKeyboardFind}
             check={check}
             solved={solved}
-            checking={checking}
             selectId={selectId}
           />
         ))}

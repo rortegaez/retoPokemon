@@ -25,7 +25,10 @@
 
 .mainCard.selected{
 	transform: scale(1.5);
-	cursor: not-allowed;
+	pointer-events: none;
+}
+.mainCard.disabled{
+	pointer-events: none;
 }
 
 .imgPokemon{

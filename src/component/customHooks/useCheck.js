@@ -51,14 +51,13 @@ export const useCheck = () => {
   }, [solved]);
 	*/
 
-  useEffect(() => {
+  /*  useEffect(() => {
     console.log("ident usecuston", selectId);
-  }, [selectId]);
+  }, [selectId]); */
 
   return {
     check,
     solved,
-    checking,
     selectId,
   };
 };
