@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 
 // import customHooks
 import { usePok } from "../../customHooks/usePok.js";
@@ -16,7 +15,7 @@ import styles from "./keyboardfind.module.css";
 
 const KeyboardFind = () => {
   const { list } = usePok();
-  const { check, solved } = useCheck();
+  const { check, solved, checking, selectId } = useCheck();
 
   //----------------------------------------------
 
@@ -32,6 +31,8 @@ const KeyboardFind = () => {
             classname={styles.cardKeyboardFind}
             check={check}
             solved={solved}
+            checking={checking}
+            selectId={selectId}
           />
         ))}
       </div>

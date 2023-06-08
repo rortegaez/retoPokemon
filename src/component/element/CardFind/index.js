@@ -1,26 +1,28 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 
 // import custom hooks
 
 //import styles
 import "./cardfind.css";
 
-const CardFind = ({ props, check, solved }) => {
+const CardFind = ({ props, check, solved, ident, selectId }) => {
   const [selected, setSelected] = useState(false);
 
-  const numberPok = props.id;
   let type = props.types[0].type.name;
 
   useEffect(() => {
-    if (solved.includes(numberPok)) {
-      setSelected((prevSelected) => !prevSelected);
+    if (selectId.includes(ident)) {
+      setSelected(true);
+    } else {
+      setTimeout(() => setSelected(false), 500);
     }
-  }, [solved]);
+  }, [selectId]);
 
   const utilities = () => {
-    check(numberPok);
-    //checkIndex(ident);
+    check(props.id, ident);
   };
+  console.log("ident cardfind", ident);
+  console.log("selected", selected);
 
   return (
     <>

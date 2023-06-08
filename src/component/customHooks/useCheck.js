@@ -4,10 +4,15 @@ import { useState, useEffect } from "react";
 export const useCheck = () => {
   const [checking, setChecking] = useState([]); // array de elemento por comprobar
   const [solved, setSolved] = useState([]); // donde se pasan los elementos de checking, ya ganadores
-  const [number, setNumber] = useState(0);
+  const [number, setNumber] = useState(0); // para hacer la lógica para que solved solo tenga un número y no duplique los numberPok
+  const [selectId, setSelectId] = useState([]); // añadimos los ident, para poder hacer el selected en cardfind
 
   const handleAddPokemon = (numberPok) => {
     setChecking((prevChecking) => [...prevChecking, numberPok]);
+  };
+
+  const handleAddIdPok = (ident) => {
+    setSelectId((prevSelected) => [...prevSelected, ident]);
   };
 
   const solveding = () => {
@@ -17,8 +22,9 @@ export const useCheck = () => {
     setNumber(0);
   };
 
-  const check = (numberPok) => {
+  const check = (numberPok, ident) => {
     handleAddPokemon(numberPok);
+    handleAddIdPok(ident);
     setNumber(numberPok);
   };
 
@@ -26,9 +32,11 @@ export const useCheck = () => {
     if (checking[checking.length - 2] === checking[checking.length - 1]) {
       console.log("winnnnn");
       solveding(number);
+      setSelectId([]);
     } else {
       console.log("looserrrr");
       setChecking([]);
+      setSelectId([]);
     }
   };
 
@@ -38,12 +46,19 @@ export const useCheck = () => {
     }
   }, [checking]);
 
-  useEffect(() => {
+  /*   useEffect(() => {
     console.log("solve usecuston", solved);
   }, [solved]);
+	*/
+
+  useEffect(() => {
+    console.log("ident usecuston", selectId);
+  }, [selectId]);
 
   return {
     check,
     solved,
+    checking,
+    selectId,
   };
 };
