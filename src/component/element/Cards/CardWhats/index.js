@@ -1,6 +1,6 @@
 import "./card.css";
 
-const Card = ({ props, checks }) => {
+const CardWhats = ({ props, checks }) => {
   const name = props.species.name;
   const synth = window.speechSynthesis;
   const utterThis = new SpeechSynthesisUtterance(name);
@@ -29,4 +29,4 @@ const Card = ({ props, checks }) => {
   );
 };
 
-export default Card;
+export default CardWhats;

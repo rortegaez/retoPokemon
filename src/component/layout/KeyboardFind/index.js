@@ -1,14 +1,14 @@
 import React from "react";
 
 // import customHooks
-import { usePok } from "../../customHooks/usePok.js";
-import { useCheck } from "../../customHooks/useCheck.js";
+import { usePok } from "../../logicalElements/customHooks/usePok";
+import { useCheck } from "../../logicalElements/customHooks/useCheck.js";
 
 //import constante
 
 //import components
-import ButtonRefresh from "../../buttons/ButtonRefresh/index.jsx";
-import CardFind from "../../element/CardFind/index.js";
+import ButtonRefresh from "../../element/buttons/ButtonRefresh/index.jsx";
+import CardFind from "../../element/Cards/CardFind/index";
 
 //import styles
 import styles from "./keyboardfind.module.css";

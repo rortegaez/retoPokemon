@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 // import constante
-import { SIZEFIND } from "../constans";
+import { SIZEFIND } from "../../constans";
 
 //import logic
 import fetchPokFind from "../logic/fetchPokFind";
