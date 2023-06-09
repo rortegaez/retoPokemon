@@ -1,5 +1,3 @@
-// funciona el deshabilitar el botón, pero hay un problemas de retarto
-
 import React from "react";
 
 // import customHooks
@@ -24,20 +22,22 @@ const KeyboardFind = () => {
   return (
     <div>
       <h1>KeyboardFind</h1>
-      <div className={styles.mainKeyboardFind}>
-        {list.map((item, index) => (
-          <CardFind
-            key={index}
-            ident={index}
-            props={item.data} //todos los datos de cada pokemon
-            classname={styles.cardKeyboardFind}
-            check={check}
-            solved={solved}
-            selectId={selectId}
-          />
-        ))}
+      <div className={styles.mainContainer}>
+        <div className={styles.keyboardFind}>
+          {list.map((item, index) => (
+            <CardFind
+              key={index}
+              ident={index}
+              props={item.data} //todos los datos de cada pokemon
+              classname={styles.cardKeyboardFind}
+              check={check}
+              solved={solved}
+              selectId={selectId}
+            />
+          ))}
+        </div>
+        <ButtonRefresh className={styles.btnRefresh} />
       </div>
-      <ButtonRefresh />
     </div>
   );
 };

@@ -1,8 +1,19 @@
-.mainKeyboardFind{
-	display: grid;
-	gap: 10px;
-	grid-template-columns: repeat(4, 1fr);
+.mainContainer{
+	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	justify-items: center;
 	align-items: center;
+	background-color: rgb(159, 201, 111);
+	padding: 15px;
+	border: 10px solid silver;
+	border-style: inset;
+	border-radius: 30px;
+}
+
+.keyboardFind{
+	display: grid;
+	gap: 10px;
+	grid-template-columns: repeat(4, 1fr);
+	padding-bottom: 15px;;
 }

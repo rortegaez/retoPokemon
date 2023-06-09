@@ -1,9 +1,9 @@
-import "./header.css";
+import "../header.css";
 
 const HeaderWhats = () => {
   return (
     <div className="titleContainer">
-      <h1 className="titlePokemon">¿Cuál es el Pokemon?</h1>
+      <h1 className="titlePokemon">Encuentra a su pareja</h1>
       <h2 className="subTitle">Push over Pokemon</h2>
     </div>
   );

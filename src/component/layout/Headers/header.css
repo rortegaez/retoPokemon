@@ -1,5 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Shantell+Sans:wght@500&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap');
 
 
 .titleContainer{
@@ -26,7 +26,12 @@
 .subTitle {
 	font-family: 'Shantell Sans', cursive;
 	color: #494e08;
-	font-size: 1.8em;
+	font-size: 1.4em;
+}
+
+.titleMainHeader{
+	font-family: 'Darumadrop One', cursive;
+	font-size: 12em;
 }
 
 @media only screen and (max-width: 660px) {

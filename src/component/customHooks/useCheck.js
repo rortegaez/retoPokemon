@@ -46,15 +46,6 @@ export const useCheck = () => {
     }
   }, [checking]);
 
-  /*   useEffect(() => {
-    console.log("solve usecuston", solved);
-  }, [solved]);
-	*/
-
-  /*  useEffect(() => {
-    console.log("ident usecuston", selectId);
-  }, [selectId]); */
-
   return {
     check,
     solved,

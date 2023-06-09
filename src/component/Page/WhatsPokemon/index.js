@@ -1,5 +1,5 @@
 // import componets
-import HeaderWhats from "../../layout/HeaderWhats/index";
+import HeaderWhats from "../../layout/Headers/HeaderWhats/index";
 import KeyboardWhats from "../../layout/KeyboardWhats/index";
 
 // import styles

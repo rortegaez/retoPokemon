@@ -2,11 +2,12 @@ import React from "react";
 
 //import layout
 import KeyboardFind from "../../layout/KeyboardFind";
+import HeaderFind from "../../layout/Headers/HeaderFind/index";
 
 const FindPokemon = () => {
   return (
     <div>
-      <h1>Find Pokemon</h1>
+      <HeaderFind />
       <KeyboardFind />
     </div>
   );

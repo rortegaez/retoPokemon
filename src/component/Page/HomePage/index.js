@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import MainHeader from "../../layout/Headers/MainHeader";
 
 export const HomePage = () => {
   return (
     <div>
-      <h1>Hola HomePage</h1>
+      <MainHeader />
       <Link to="/whatspokemon">Whats Pokemon</Link>
       <Link to="/findpokemon">Find Pokemon</Link>
     </div>
