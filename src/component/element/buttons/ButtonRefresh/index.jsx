@@ -1,7 +1,7 @@
 import React from "react";
 
 //import style
-import style from "../buttonRefresh.module.css";
+import style from "../button.module.css";
 
 const ButtonRefresh = ({ handleRefresh }) => {
   const utility = () => {
