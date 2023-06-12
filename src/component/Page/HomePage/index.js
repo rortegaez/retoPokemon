@@ -3,12 +3,16 @@ import MainHeader from "../../layout/Headers/MainHeader";
 import BtnGoWhats from "../../element/buttons/BtnGoWhats";
 import BtnGoFind from "../../element/buttons/BtnGoFind/index";
 
+import style from "./homepage.module.css";
+
 export const HomePage = () => {
   return (
-    <div>
+    <div className={style.main}>
       <MainHeader />
-      <BtnGoWhats />
-      <BtnGoFind />
+      <section className={style.board}>
+        <BtnGoWhats />
+        <BtnGoFind />
+      </section>
     </div>
   );
 };
