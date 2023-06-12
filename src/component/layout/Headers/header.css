@@ -30,6 +30,8 @@
 .titleMainHeader {
   font-family: "Darumadrop One", cursive;
   font-size: 12em;
+  -webkit-text-stroke: 5px #308208;
+  /* para poner borde al texto */
   color: transparent;
   background-image: linear-gradient(
     to left,
