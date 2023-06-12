@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
 
 // import components
-import Card from "../../element/Card";
-import ButtonRefresh from "../../buttons/ButtonRefresh";
-import { SIZE } from "../../constans.js";
+import CardWhats from "../../element/Cards/CardWhats/index";
+import ButtonRefresh from "../../element/buttons/ButtonRefresh/index.jsx";
+import { SIZEWHATS } from "../../constans.js";
 import confetti from "canvas-confetti";
 
 // import styles
 import styles from "./keyboard.module.css";
 
 // import logic
-import fetchPokemon from "../../logic/fetchPokemon";
+import fetchPokemon from "../../logicalElements/logic/fetchPokemon";
 
 const Keyboard = () => {
   const [list, setList] = useState([]);
@@ -26,13 +26,13 @@ const Keyboard = () => {
       pass = pass + 1;
     }
 
-    if (pass === SIZE) {
+    if (pass === SIZEWHATS) {
       confetti();
     }
   };
 
   const fetchPoke = async () => {
-    const pokes = await fetchPokemon();
+    const pokes = await fetchPokemon(SIZEWHATS);
     setList(pokes);
   };
 
@@ -49,7 +49,7 @@ const Keyboard = () => {
       <div className={styles.mainContainer}>
         <div className={styles.keyboards}>
           {list.map((item, index) => (
-            <Card
+            <CardWhats
               key={index}
               // si quiero utilizar el identificador del index, debo de enviarlo como un elemento diferente que la key
               id={index}

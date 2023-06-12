@@ -1,8 +1,8 @@
-import { SIZE } from "../constans.js";
+//import { SIZEWHATS } from "../constans.js";
 
-const getNumber = () => {
+const getNumber = (size) => {
   let number = [];
-  for (let i = 0; i < SIZE; i++) {
+  for (let i = 0; i < size; i++) {
     const result = Math.round(Math.random() * 905);
     number = [...number, result];
   }

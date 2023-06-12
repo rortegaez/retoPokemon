@@ -1,0 +1,5 @@
+Pendiente:
+    - revisar logicas en whats pokemon, para intentar extraer más
+
+Find Pokemon: 
+    - 
