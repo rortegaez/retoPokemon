@@ -29,9 +29,6 @@
   text-align: center;
   justify-content: center;
 }
-.card.selected {
-  background-image: url("../componets/azul.png");
-}
 
 .mainCard.selected {
   transform: scale(1.2);
