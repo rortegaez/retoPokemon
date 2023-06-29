@@ -4,14 +4,15 @@
   background-color: yellow;
   font-family: "Shantell Sans", cursive;
   color: #0f0b9d;
-  display: grid;
-  grid-template-columns: repeat(4, 40px);
-  grid-template-rows: fit-content;
-  gap: 8px;
   border: 5px solid silver;
   border-style: outset;
   border-radius: 20px;
   box-shadow: 3px 3px 5px #000000;
+
+  background-image: url("../componets/pokeapi.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
 
   &:hover {
     box-shadow: 3px 3px 5px yellow;
@@ -27,13 +28,15 @@
   flex-direction: column;
   text-align: center;
   justify-content: center;
-  /* visibility: hidden; */
+}
+.card.selected {
+  background-image: url("../componets/azul.png");
 }
 
 .mainCard.selected {
-  transform: scale(1.5);
+  transform: scale(1.2);
+  background-image: url("");
   pointer-events: none;
-  background-color: red;
 }
 .mainCard.disabled {
   visibility: hidden;
@@ -68,59 +71,4 @@
 }
 .imgPok.disabled {
   visibility: hidden;
-}
-
-#normal {
-  background: #a8a878;
-}
-#fire {
-  background: #f08030;
-}
-#fighting {
-  background: #c03028;
-}
-#water {
-  background: #6890f0;
-}
-#flying {
-  background: #a890f0;
-}
-#grass {
-  background: #78c850;
-}
-#poison {
-  background: #a040a0;
-}
-#electric {
-  background: #f8d546;
-}
-#ground {
-  background: #e0c068;
-}
-#psychic {
-  background: #f85888;
-}
-#rock {
-  background: #b8a038;
-}
-#ice {
-  background: #98d8d8;
-}
-#bug {
-  background: #a8b820;
-}
-#dragon {
-  background: #7038f8;
-}
-#ghost {
-  background: #705898;
-}
-#dark {
-  background: #705848;
-}
-#steel {
-  background: #b8b8d0;
-}
-#fairy {
-  background: #ee99ac;
 }
