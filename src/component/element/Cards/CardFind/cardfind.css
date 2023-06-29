@@ -1,92 +1,126 @@
-@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap");
 
-.mainCard{
-	font-family: 'Shantell Sans', cursive;
-	color: #0f0b9d;
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-	justify-content: center;
-	height: 30vh;
-	padding: 1em;
-	border: 5px solid silver;
-	border-style: outset;
-	border-radius: 20px;
-	box-shadow: 3px 3px 5px #000000;
-	
-	&:hover{
-		box-shadow: 3px 3px 5px yellow;
-	}
-	&:active{
-		border-style: inset;
-		box-shadow: 3px 3px 5px red;
-	}
-}
+.mainCard {
+  background-color: yellow;
+  font-family: "Shantell Sans", cursive;
+  color: #0f0b9d;
+  display: grid;
+  grid-template-columns: repeat(4, 40px);
+  grid-template-rows: fit-content;
+  gap: 8px;
+  border: 5px solid silver;
+  border-style: outset;
+  border-radius: 20px;
+  box-shadow: 3px 3px 5px #000000;
 
-.mainCard.selected{
-	transform: scale(1.5);
-	pointer-events: none;
-}
-.mainCard.disabled{
-	pointer-events: none;
+  &:hover {
+    box-shadow: 3px 3px 5px yellow;
+  }
+  &:active {
+    border-style: inset;
+    box-shadow: 3px 3px 5px red;
+  }
 }
 
-.imgPokemon{
-	width: 20vh;
-	height: 20vh;
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  /* visibility: hidden; */
 }
 
-#normal{
-	background: #A8A878;
+.mainCard.selected {
+  transform: scale(1.5);
+  pointer-events: none;
+  background-color: red;
 }
-#fire{
-	background: #F08030;
+.mainCard.disabled {
+  visibility: hidden;
+  pointer-events: none;
 }
-#fighting{
-	background: #C03028;
+
+.namePok {
+  visibility: hidden;
 }
-#water{
-	background: #6890F0;
+.namePok.selected {
+  visibility: visible;
 }
-#flying{
-	background: #A890F0;
+.namePok.disabled {
+  visibility: hidden;
 }
-#grass{
-	background: #78C850;
+
+.card.selected {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  visibility: visible;
 }
-#poison{
-	background: #A040A0;
+
+.imgPok {
+  width: 20vh;
+  height: 20vh;
+  visibility: hidden;
 }
-#electric{
-	background: #F8D546;
+.imgPok.selected {
+  visibility: visible;
 }
-#ground{
-	background: #E0C068;
+.imgPok.disabled {
+  visibility: hidden;
 }
-#psychic{
-	background: #F85888;
+
+#normal {
+  background: #a8a878;
 }
-#rock{
-	background: #B8A038;
+#fire {
+  background: #f08030;
 }
-#ice{
-	background: #98D8D8;
+#fighting {
+  background: #c03028;
 }
-#bug{
-	background: #A8B820;
+#water {
+  background: #6890f0;
 }
-#dragon{
-	background: #7038F8;
+#flying {
+  background: #a890f0;
 }
-#ghost{
-	background: #705898;
+#grass {
+  background: #78c850;
 }
-#dark{
-	background: #705848;
+#poison {
+  background: #a040a0;
 }
-#steel{
-	background: #B8B8D0;
+#electric {
+  background: #f8d546;
 }
-#fairy{
-	background: #EE99AC;
+#ground {
+  background: #e0c068;
+}
+#psychic {
+  background: #f85888;
+}
+#rock {
+  background: #b8a038;
+}
+#ice {
+  background: #98d8d8;
+}
+#bug {
+  background: #a8b820;
+}
+#dragon {
+  background: #7038f8;
+}
+#ghost {
+  background: #705898;
+}
+#dark {
+  background: #705848;
+}
+#steel {
+  background: #b8b8d0;
+}
+#fairy {
+  background: #ee99ac;
 }

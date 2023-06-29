@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 
+import imagen from "../componets/pokeapi.png";
+
 // import custom hooks
 
 //import styles
@@ -39,27 +41,24 @@ const CardFind = ({ props, check, solved, ident, selectId }) => {
   return (
     <>
       <div
-        className={`mainCard ${selected ? "selected" : ""} 
+        className={`cardBox ${selected ? "selected" : ""} 
 				${disabled ? "disabled" : ""}`}
-        /* id={`${type}`} */
-        onClick={utilities}
+        id={`${type}`}
       >
-        <div className="card">
-          <div className="back">
-            <h1
-              className={`namePok ${selected ? "selected" : ""} ${
-                disabled ? "disabled" : ""
-              }`}
-            >
-              {props.species.name}
-            </h1>
-            <img
-              src={props.sprites.other.home.front_default}
-              alt={props.species.name}
-              className={`imgPok ${selected ? "selected" : ""} ${
-                disabled ? "disabled" : ""
-              }`}
-            />
+        <div className="cardContainer">
+          <div className="card">
+            <div className="front" onClick={utilities}>
+              {/* <img src={"../componets/pokeapi.png"} alt="pokeApi" /> */}
+              <img src={imagen} alt="pokeApiAA" />
+            </div>
+            <div className="back">
+              <h1>{props.species.name}</h1>
+              <img
+                src={props.sprites.other.home.front_default}
+                alt={props.species.name}
+                className="imgPokemon"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -68,3 +67,4 @@ const CardFind = ({ props, check, solved, ident, selectId }) => {
 };
 
 export default CardFind;
+
