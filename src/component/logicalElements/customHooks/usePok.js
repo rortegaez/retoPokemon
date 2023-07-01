@@ -16,11 +16,14 @@ export const usePok = () => {
     setList(pokes);
   };
 
+  const listPok = list.map((item) => item.data.id);
+
   useEffect(() => {
     fetchPoke();
   }, []);
 
   return {
     list,
+    listPok,
   };
 };

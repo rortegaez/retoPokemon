@@ -17,7 +17,7 @@ const CardFind = ({ props, check, solved, ident, selectId }) => {
     }
   };
 
-  const testSelect = (num) => {
+  const testSelect = () => {
     if (selectId.includes(ident)) {
       setSelected(true);
     } else {

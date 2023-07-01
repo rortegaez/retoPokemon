@@ -5,6 +5,7 @@ import { usePok } from "../../logicalElements/customHooks/usePok";
 import { useCheck } from "../../logicalElements/customHooks/useCheck.js";
 
 //import constante
+import { SIZEFIND } from "../../constans";
 
 //import components
 import ButtonRefresh from "../../element/buttons/ButtonRefresh/index.jsx";
@@ -14,14 +15,21 @@ import CardFind from "../../element/Cards/CardFind/index";
 import styles from "./keyboardfind.module.css";
 
 const KeyboardFind = () => {
-  const { list } = usePok();
+  const { list, listPok } = usePok();
   const { check, solved, selectId } = useCheck();
+
+  console.log("solved", solved);
+  console.log("listPok", listPok);
+  console.log("selectID", selectId);
+
+  if (solved.length === SIZEFIND) {
+    console.log("hemos ganado");
+  }
 
   //----------------------------------------------
 
   return (
     <div>
-      <h1>KeyboardFind</h1>
       <div className={styles.mainContainer}>
         <div className={styles.keyboardFind}>
           {list.map((item, index) => (
@@ -33,6 +41,7 @@ const KeyboardFind = () => {
               check={check}
               solved={solved}
               selectId={selectId}
+              listPok={listPok}
             />
           ))}
         </div>

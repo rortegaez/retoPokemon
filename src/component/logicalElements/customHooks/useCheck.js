@@ -30,11 +30,11 @@ export const useCheck = () => {
 
   const checkFinal = () => {
     if (checking[checking.length - 2] === checking[checking.length - 1]) {
-      console.log("winnnnn");
+      // console.log("winnnnn");
       solveding(number);
       setSelectId([]);
     } else {
-      console.log("looserrrr");
+      // console.log("looserrrr");
       setChecking([]);
       setSelectId([]);
     }
