@@ -10,6 +10,7 @@ import { useSize } from "../../logicalElements/customHooks/useSize";
 import ButtonRefreshFind from "../../../component/element/buttons/ButtonRefreshFind/";
 import CardFind from "../../element/Cards/CardFind/index";
 import BtnChangeFind from "../../../component/element/buttons/BtnChangeFind/index";
+import BtnBack from "../../element/buttons/BtnBack";
 
 //import styles
 import styles from "./keyboardfind.module.css";
@@ -69,6 +70,7 @@ const KeyboardFind = () => {
             decrementFind={decrementFind}
             severalUtility={severalUtility}
           />
+          <BtnBack />
         </div>
       </div>
     </div>

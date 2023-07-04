@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import CardWhats from "../../element/Cards/CardWhats/index";
 import ButtonRefresh from "../../element/buttons/ButtonRefresh/index.jsx";
 import confetti from "canvas-confetti";
+import BtnBack from "../../element/buttons/BtnBack";
 
 //import customHooks
 import { useSize } from "../../logicalElements/customHooks/useSize";
@@ -71,6 +72,7 @@ const Keyboard = () => {
             decrementWhat={decrementWhat}
             sizewhat={sizewhat}
           />
+          <BtnBack />
         </div>
       </div>
     </>
