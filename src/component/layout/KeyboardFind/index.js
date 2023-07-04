@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Confetti from "react-confetti";
 
 // import customHooks
 import { usePok } from "../../logicalElements/customHooks/usePok";
@@ -15,21 +16,28 @@ import CardFind from "../../element/Cards/CardFind/index";
 import styles from "./keyboardfind.module.css";
 
 const KeyboardFind = () => {
-  const { list, listPok } = usePok();
-  const { check, solved, selectId } = useCheck();
+  const { list, listPok, handleRefresh } = usePok();
+  const { check, solved, selectId, cleanSolved } = useCheck();
 
-  console.log("solved", solved);
-  console.log("listPok", listPok);
-  console.log("selectID", selectId);
+  const [chck, setChck] = useState(false);
 
-  if (solved.length === SIZEFIND) {
-    console.log("hemos ganado");
-  }
+  const utility = () => {
+    handleRefresh();
+    cleanSolved();
+    setChck(false);
+  };
+
+  useEffect(() => {
+    if (solved.length === SIZEFIND) {
+      setChck(true);
+    }
+  }, [solved]);
 
   //----------------------------------------------
 
   return (
     <div>
+      {chck && <Confetti />}
       <div className={styles.mainContainer}>
         <div className={styles.keyboardFind}>
           {list.map((item, index) => (
@@ -45,7 +53,8 @@ const KeyboardFind = () => {
             />
           ))}
         </div>
-        <ButtonRefresh className={styles.btnRefresh} />
+        <button onClick={utility}>Cambio</button>
+        <ButtonRefresh handleRefresh={utility} className={styles.btnRefresh} />
       </div>
     </div>
   );

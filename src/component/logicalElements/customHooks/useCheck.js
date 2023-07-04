@@ -22,6 +22,10 @@ export const useCheck = () => {
     setNumber(0);
   };
 
+  const cleanSolved = () => {
+    setSolved([]);
+  };
+
   const check = (numberPok, ident) => {
     handleAddPokemon(numberPok);
     handleAddIdPok(ident);
@@ -50,5 +54,6 @@ export const useCheck = () => {
     check,
     solved,
     selectId,
+    cleanSolved,
   };
 };
