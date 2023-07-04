@@ -22,6 +22,10 @@ export const useCheck = () => {
     setNumber(0);
   };
 
+  const cleanSolved = () => {
+    setSolved([]);
+  };
+
   const check = (numberPok, ident) => {
     handleAddPokemon(numberPok);
     handleAddIdPok(ident);
@@ -30,11 +34,11 @@ export const useCheck = () => {
 
   const checkFinal = () => {
     if (checking[checking.length - 2] === checking[checking.length - 1]) {
-      console.log("winnnnn");
+      // console.log("winnnnn");
       solveding(number);
       setSelectId([]);
     } else {
-      console.log("looserrrr");
+      // console.log("looserrrr");
       setChecking([]);
       setSelectId([]);
     }
@@ -50,5 +54,6 @@ export const useCheck = () => {
     check,
     solved,
     selectId,
+    cleanSolved,
   };
 };

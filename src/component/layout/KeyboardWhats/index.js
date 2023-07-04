@@ -16,8 +16,6 @@ const Keyboard = () => {
   const [list, setList] = useState([]);
   const [handle, setHandle] = useState(true);
 
-  //pendiente de finalizar la lógica, cuando se pulse el botón, cuando se pulse SIZE diferentes saltará el confetti
-
   let numberId = [];
   let pass = 0;
   const checks = (id) => {

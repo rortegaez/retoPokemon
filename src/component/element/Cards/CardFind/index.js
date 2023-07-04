@@ -9,8 +9,6 @@ const CardFind = ({ props, check, solved, ident, selectId }) => {
   const [selected, setSelected] = useState(false); // donde hacemos las comprobaciones de true, para el objeto seleccionado
   const [disabled, setDisabled] = useState(false); // donde hacemos las comprobaciones de true, para los objetos ganadores
 
-  let type = props.types[0].type.name;
-
   const testSolved = (num) => {
     if (solved.includes(num)) {
       setDisabled(true);
@@ -19,7 +17,7 @@ const CardFind = ({ props, check, solved, ident, selectId }) => {
     }
   };
 
-  const testSelect = (num) => {
+  const testSelect = () => {
     if (selectId.includes(ident)) {
       setSelected(true);
     } else {
@@ -41,18 +39,25 @@ const CardFind = ({ props, check, solved, ident, selectId }) => {
       <div
         className={`mainCard ${selected ? "selected" : ""} 
 				${disabled ? "disabled" : ""}`}
-        id={`${type}`}
+        onClick={utilities}
       >
-        <div id="card" onClick={utilities}>
-          <h1>{props.species.name}</h1>
+        <div className={`card ${selected} ? "selected" : ""`}>
+          <h1
+            className={`namePok ${selected ? "selected" : ""} ${
+              disabled ? "disabled" : ""
+            }`}
+          >
+            {props.species.name}
+          </h1>
           <img
             src={props.sprites.other.home.front_default}
             alt={props.species.name}
-            className="imgPokemon"
+            className={`imgPok ${selected ? "selected" : ""} ${
+              disabled ? "disabled" : ""
+            }`}
           />
         </div>
       </div>
-      {/* <button disabled={disabled}>elemento</button> */}
     </>
   );
 };

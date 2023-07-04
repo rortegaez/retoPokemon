@@ -1,53 +1,74 @@
-@import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Shantell+Sans:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Shantell+Sans:wght@500&display=swap");
 
-
-
-.titleContainer{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-	justify-content: center;
-	box-sizing: content-box;
-	height: auto;
-	width: auto;
-	border-radius: 30px;
-	border: 10px solid silver;
-	border-style: inset;
-	background-color: rgb(159, 201, 111);
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  box-sizing: content-box;
+  height: auto;
+  width: auto;
+  border-radius: 30px;
+  border: 10px solid silver;
+  border-style: inset;
+  background-color: rgb(159, 201, 111);
 }
 
 .titlePokemon {
-	font-family: 'Shantell Sans', cursive;
-	color: #494e08;
-	font-size: 3em;
+  font-family: "Shantell Sans", cursive;
+  color: #494e08;
+  font-size: 3em;
 }
 
 .subTitle {
-	font-family: 'Shantell Sans', cursive;
-	color: #494e08;
-	font-size: 1.4em;
+  font-family: "Shantell Sans", cursive;
+  color: #494e08;
+  font-size: 1.4em;
 }
 
-.titleMainHeader{
-	font-family: 'Darumadrop One', cursive;
-	font-size: 12em;
+.titleMainHeader {
+  font-family: "Darumadrop One", cursive;
+  font-size: 12em;
+  -webkit-text-stroke: 5px #308208;
+  /* para poner borde al texto */
+  color: transparent;
+  background-image: linear-gradient(
+    to left,
+    #9df076,
+    #43991a,
+    #b4b149,
+    #f4ed11
+  );
+  background-clip: text;
+  animation: color 3s linear infinite;
+  background-size: 500%;
+}
+
+@keyframes color {
+  from {
+    background-position: 0% 50%;
+  }
+
+  to {
+    background-position: 100% 50%;
+  }
 }
 
 @media only screen and (max-width: 660px) {
-	.titlePokemon{
-		font-size: 2em;
-	}
-	.subTitle{
-		font-size: 1em;
-	}
+  .titlePokemon {
+    font-size: 2em;
+  }
+  .subTitle {
+    font-size: 1em;
+  }
 }
 
-@media only screen and (max-width: 200px){
-	.titlePokemon{
-		font-size: 1em;
-	}
-	.subTitle{
-		font-size: 0.6em;
-	}
+@media only screen and (max-width: 200px) {
+  .titlePokemon {
+    font-size: 1em;
+  }
+  .subTitle {
+    font-size: 0.6em;
+  }
 }
