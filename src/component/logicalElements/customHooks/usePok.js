@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react";
 
-// import constante
-import { SIZEFIND } from "../../constans";
+//import customHooks
+import { useSize } from "../../logicalElements/customHooks/useSize";
 
 //import logic
 import fetchPokFind from "../logic/fetchPokFind";
@@ -12,8 +12,10 @@ export const usePok = () => {
   const [list, setList] = useState([]);
   const [change, setChange] = useState(true);
 
-  const fetchPoke = async () => {
-    const pokes = await fetchPokFind(SIZEFIND);
+  const { sizefind } = useSize();
+
+  const fetchPoke = async (number) => {
+    const pokes = await fetchPokFind(number);
     setList(pokes);
   };
 
@@ -25,12 +27,12 @@ export const usePok = () => {
 
   useEffect(() => {
     fetchPoke();
-    console.log("useEffect");
   }, [change]);
 
   return {
     list,
     listPok,
     handleRefresh,
+    fetchPoke,
   };
 };

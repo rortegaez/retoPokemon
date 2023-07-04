@@ -4,20 +4,21 @@ import Confetti from "react-confetti";
 // import customHooks
 import { usePok } from "../../logicalElements/customHooks/usePok";
 import { useCheck } from "../../logicalElements/customHooks/useCheck.js";
-
-//import constante
-import { SIZEFIND } from "../../constans";
+import { useSize } from "../../logicalElements/customHooks/useSize";
 
 //import components
 import ButtonRefreshFind from "../../../component/element/buttons/ButtonRefreshFind/";
 import CardFind from "../../element/Cards/CardFind/index";
+import BtnChangeFind from "../../../component/element/buttons/BtnChangeFind/index";
 
 //import styles
 import styles from "./keyboardfind.module.css";
 
 const KeyboardFind = () => {
-  const { list, listPok, handleRefresh } = usePok();
+  const { list, listPok, handleRefresh, fetchPoke } = usePok();
   const { check, solved, selectId, cleanSolved } = useCheck();
+  const { sizefind, incrementFind, decrementFind } = useSize();
+  console.log(sizefind);
 
   const [chck, setChck] = useState(false);
 
@@ -28,7 +29,11 @@ const KeyboardFind = () => {
   };
 
   useEffect(() => {
-    if (solved.length === SIZEFIND) {
+    fetchPoke(sizefind);
+  }, [sizefind]);
+
+  useEffect(() => {
+    if (solved.length === sizefind) {
       setChck(true);
     }
   }, [solved]);
@@ -53,11 +58,18 @@ const KeyboardFind = () => {
             />
           ))}
         </div>
-        {/* <button onClick={utility}>Cambio</button> */}
-        <ButtonRefreshFind
-          severalUtility={severalUtility}
-          className={styles.btnRefresh}
-        />
+        <div className={styles.containerBtn}>
+          <ButtonRefreshFind
+            severalUtility={severalUtility}
+            className={styles.btnRefresh}
+          />
+          <BtnChangeFind
+            sizefind={sizefind}
+            incrementFind={incrementFind}
+            decrementFind={decrementFind}
+            severalUtility={severalUtility}
+          />
+        </div>
       </div>
     </div>
   );
