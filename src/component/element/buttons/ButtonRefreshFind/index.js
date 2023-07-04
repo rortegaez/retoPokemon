@@ -3,9 +3,9 @@ import React from "react";
 //import style
 import style from "../button.module.css";
 
-const ButtonRefresh = ({ handleRefresh }) => {
+const ButtonRefresh = ({ severalUtility }) => {
   const utility = () => {
-    handleRefresh();
+    severalUtility();
   };
 
   return (

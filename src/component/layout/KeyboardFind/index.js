@@ -9,7 +9,7 @@ import { useCheck } from "../../logicalElements/customHooks/useCheck.js";
 import { SIZEFIND } from "../../constans";
 
 //import components
-import ButtonRefresh from "../../element/buttons/ButtonRefresh/index.jsx";
+import ButtonRefreshFind from "../../../component/element/buttons/ButtonRefreshFind/";
 import CardFind from "../../element/Cards/CardFind/index";
 
 //import styles
@@ -21,7 +21,7 @@ const KeyboardFind = () => {
 
   const [chck, setChck] = useState(false);
 
-  const utility = () => {
+  const severalUtility = () => {
     handleRefresh();
     cleanSolved();
     setChck(false);
@@ -53,8 +53,11 @@ const KeyboardFind = () => {
             />
           ))}
         </div>
-        <button onClick={utility}>Cambio</button>
-        <ButtonRefresh handleRefresh={utility} className={styles.btnRefresh} />
+        {/* <button onClick={utility}>Cambio</button> */}
+        <ButtonRefreshFind
+          severalUtility={severalUtility}
+          className={styles.btnRefresh}
+        />
       </div>
     </div>
   );
