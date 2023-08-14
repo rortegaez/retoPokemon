@@ -22,6 +22,7 @@ export const useCheck = () => {
     setNumber(0);
   };
 
+  //cuando una partida esta ganada con el refresh, dejamos el solved sin ningún elemento
   const cleanSolved = () => {
     setSolved([]);
   };

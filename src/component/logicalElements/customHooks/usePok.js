@@ -21,12 +21,13 @@ export const usePok = () => {
 
   const listPok = list.map((item) => item.data.id);
 
+  //cada vez que cambia el change, hacemos un nuevo useEffect y un nuevo fetchPoke, por lo que obtenemos una lista nuevo de pokemons
   const handleRefresh = () => {
     setChange(!change);
   };
 
   useEffect(() => {
-    fetchPoke();
+    fetchPoke(sizefind);
   }, [change]);
 
   return {

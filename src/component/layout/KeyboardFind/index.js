@@ -19,13 +19,12 @@ const KeyboardFind = () => {
   const { list, listPok, handleRefresh, fetchPoke } = usePok();
   const { check, solved, selectId, cleanSolved } = useCheck();
   const { sizefind, incrementFind, decrementFind } = useSize();
-  console.log(sizefind);
 
   const [chck, setChck] = useState(false);
 
   const severalUtility = () => {
-    handleRefresh();
     cleanSolved();
+    handleRefresh();
     setChck(false);
   };
 
