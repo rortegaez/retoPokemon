@@ -60,3 +60,10 @@ a:active {
     box-shadow: 1px 1px 3px red;
   }
 }
+
+@media (max-width: 650px) {
+  .containerBtn {
+    width: 60px;
+    height: 30px;
+  }
+}

@@ -29,7 +29,7 @@
 
 .titleMainHeader {
   font-family: "Darumadrop One", cursive;
-  font-size: 12em;
+  font-size: 10em;
   -webkit-text-stroke: 5px #308208;
   /* para poner borde al texto */
   color: transparent;
@@ -55,12 +55,15 @@
   }
 }
 
-@media only screen and (max-width: 660px) {
+@media (max-width: 650px) {
   .titlePokemon {
     font-size: 2em;
   }
   .subTitle {
     font-size: 1em;
+  }
+  .titleMainHeader {
+    font-size: 6em;
   }
 }
 

@@ -2,12 +2,12 @@
 
 .mainCard {
   font-family: "Shantell Sans", cursive;
-  color: #0f0b9d;
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: center;
-  height: 30vh;
+  width: 150px;
+  height: 250px;
   padding: 1em;
   border: 5px solid silver;
   border-style: outset;
@@ -23,9 +23,28 @@
   }
 }
 
+.cardTitle {
+  color: #0f0b9d;
+  font-size: 1.5em;
+}
+
 .imgPokemon {
-  width: 20vh;
-  height: 20vh;
+  width: 120px;
+  height: 120px;
+}
+
+@media (max-width: 650px) {
+  .mainCard {
+    width: 70px;
+    height: 150px;
+  }
+  .imgPokemon {
+    width: 60px;
+    height: 60px;
+  }
+  .cardTitle {
+    font-size: 1em;
+  }
 }
 
 #normal {

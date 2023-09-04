@@ -32,3 +32,10 @@ a:visited,
 a:active {
   text-decoration: none;
 }
+
+@media (max-width: 650px) {
+  .containerBtn {
+    width: 60px;
+    height: 30px;
+  }
+}

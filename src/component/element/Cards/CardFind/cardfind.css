@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap");
 
 .mainCard {
+  width: 100px;
+  height: 200px;
+
   background-color: yellow;
   font-family: "Shantell Sans", cursive;
-  color: #0f0b9d;
   border: 5px solid silver;
   border-style: outset;
   border-radius: 20px;
@@ -41,6 +43,8 @@
 }
 
 .namePok {
+  color: #0f0b9d;
+  font-size: 1.5em;
   visibility: hidden;
 }
 .namePok.selected {
@@ -59,8 +63,8 @@
 }
 
 .imgPok {
-  width: 20vh;
-  height: 20vh;
+  width: 120px;
+  height: 120px;
   visibility: hidden;
 }
 .imgPok.selected {
@@ -68,4 +72,18 @@
 }
 .imgPok.disabled {
   visibility: hidden;
+}
+
+@media (max-width: 650px) {
+  .mainCard {
+    width: 40px;
+    height: 100px;
+  }
+  .imgPok {
+    width: 30px;
+    height: 30px;
+  }
+  .namePok {
+    font-size: 1em;
+  }
 }

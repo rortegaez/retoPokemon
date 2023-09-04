@@ -17,7 +17,7 @@ const CardWhats = ({ props, checks }) => {
     <>
       <div className="mainCard" id={`${type}`}>
         <div id={`${type}`} onClick={utilities}>
-          <h1>{props.species.name}</h1>
+          <h1 className='cardTitle'>{props.species.name}</h1>
           <img
             src={props.sprites.other.home.front_default}
             alt={props.species.name}
