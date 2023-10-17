@@ -11,13 +11,15 @@ import "./app.css";
 function App() {
   return (
     <div className="app">
-      <BrowserRouter>
-        <Routes>
-          <Route index element={<HomePage />} />
-          <Route path="/whatspokemon" element={<WhatsPokemon />} />
-          <Route path="/findpokemon" element={<FindPokemon />} />+
-        </Routes>
-      </BrowserRouter>
+      <div className="mainContainer">
+        <BrowserRouter>
+          <Routes>
+            <Route index element={<HomePage />} />
+            <Route path="/whatspokemon" element={<WhatsPokemon />} />
+            <Route path="/findpokemon" element={<FindPokemon />} />+
+          </Routes>
+        </BrowserRouter>
+      </div>
     </div>
   );
 }

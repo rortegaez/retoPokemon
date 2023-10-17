@@ -1,0 +1,14 @@
+$color-background: #abf3b4;
+$color-app: #0cdf28;
+
+.app {
+  background: $color-background;
+  .mainContainer {
+    background: $color-app;
+    width: 650px;
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+  }
+}
