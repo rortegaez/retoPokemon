@@ -1,0 +1,26 @@
+.container {
+  @extend .flexColumn;
+  background: violet;
+  border-style: inset;
+  border-radius: 30px;
+  border: 10px solid silver;
+  padding: 15px;
+}
+
+.mainContainerKeyboards {
+  @extend .container;
+  .keyboards {
+    display: grid;
+    box-sizing: border-box;
+    width: 60vw;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+  .contBtn {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+}

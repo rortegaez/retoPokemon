@@ -1,0 +1,11 @@
+.app {
+  background: #abf3b4; }
+  .app .mainContainer {
+    background: #0cdf28;
+    width: 650px;
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px; }
+
+/*# sourceMappingURL=index..map */

@@ -1,9 +1,10 @@
 // import componets
-import HeaderWhats from "../../layout/Headers/HeaderWhats/index";
-import KeyboardWhats from "../../layout/KeyboardWhats/index";
+import HeaderWhats from "../layout/Headers/HeaderWhats";
+import KeyboardWhats from "../layout/Keyboards/KeyboardWhats";
 
-// import styles
-import "./whatspokemon.css";
+// import styles pages.scss
+import "../../index.css";
+
 function WhatsPokemon() {
   return (
     <div className="mainContainer">

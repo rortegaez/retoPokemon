@@ -10,7 +10,7 @@ import BtnBack from "../../element/buttons/BtnBack";
 import { useSize } from "../../logicalElements/customHooks/useSize";
 
 // import styles
-import styles from "./keyboard.module.css";
+import "../../../index.css"
 
 // import logic
 import fetchPokemon from "../../logicalElements/logic/fetchPokemon";
@@ -50,8 +50,8 @@ const Keyboard = () => {
 
   return (
     <>
-      <div className={styles.mainContainer}>
-        <div className={styles.keyboards}>
+      <div className='mainContainerKeyboards'>
+        <div className='keyboards'>
           {list.map((item, index) => (
             <CardWhats
               key={index}
@@ -62,10 +62,9 @@ const Keyboard = () => {
           ))}
         </div>
 
-        <div className={styles.contBtn}>
+        <div className='contBtn'>
           <ButtonRefresh
             handleRefresh={handleRefrest}
-            className={styles.contBtn}
           />
           <BtnChangeWhats
             incrementWhat={incrementWhat}

@@ -1,13 +1,106 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url("https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Shantell+Sans:wght@500&display=swap");
+/* Css del nombre en la primera pantalla "pokemon" */
+@import url("https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap");
+.titleMainHeader {
+  font-family: "Darumadrop One", cursive;
+  font-size: 15vh;
+  -webkit-text-stroke: 0.5vh #308208;
+  /* para poner borde al texto */
+  color: transparent;
+  background-image: linear-gradient(to left, #9df076, #43991a, #b4b149, #f4ed11);
+  background-clip: text;
+  animation: color 3s linear infinite; }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+/* Css de los titulos de las dos pantallas de juegos */
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  box-sizing: content-box;
+  height: auto;
+  width: auto;
+  border-radius: 30px;
+  border: 10px solid silver;
+  border-style: inset;
+  background-color: #9fc96f; }
+  .titleContainer .titlePokemon, .titleContainer .subTitle {
+    font-family: "Shantell Sans", cursive;
+    color: #494e08;
+    font-size: 10vh; }
+  .titleContainer .subTitle {
+    font-size: 4vh; }
+
+/* la cabecera de cada pantalla */
+.main .board {
+  display: flex;
+  flex-direction: row;
+  gap: 5vw;
+  margin-bottom: 3.5vw; }
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center; }
+
+/* layout de cada pantalla */
+.container, .mainContainerKeyboards {
+  background: violet;
+  border-style: inset;
+  border-radius: 30px;
+  border: 10px solid silver;
+  padding: 15px; }
+
+.mainContainerKeyboards .keyboards {
+  display: grid;
+  box-sizing: border-box;
+  width: 60vw;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center; }
+.mainContainerKeyboards .contBtn {
+  display: flex;
+  flex-direction: row;
+  gap: 10px; }
+
+/* los diferentes opciones espacio de juego */
+.containerBtn {
+  font-family: "Shantell Sans", cursive;
+  font-size: auto;
+  padding: 0.5em;
+  background: #da16b6;
+  font-weight: bold;
+  height: 4vw;
+  width: 8vw;
+  border: 0.3vw solid silver;
+  border-style: outset;
+  border-radius: 20px;
+  box-shadow: 0.2vw 0.2vw 0.4vw #000000; }
+  .containerBtn:hover {
+    background: #f598e4; }
+  .containerBtn a:link,
+  .containerBtn a:visited,
+  .containerBtn a:active {
+    text-decoration: none; }
+
+/* botones */
+.flexColumn, .main, .container, .mainContainerKeyboards, .containerBtn, body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+body {
+  background: #abf3b4; }
+
+.mainContainer {
+  background: #0cdf28;
+  width: 80vw;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  border-radius: 20px; }
+
+/*# sourceMappingURL=index.css.map */

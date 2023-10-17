@@ -1,7 +1,7 @@
 import React from "react";
 
 //import style
-import "../header.css";
+import "../../../index.css";
 
 const MainHeader = () => {
   return (

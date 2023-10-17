@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap");
+
+.containerBtn {
+  @extend .flexColumn;
+  font-family: "Shantell Sans", cursive;
+  font-size: auto;
+  padding: 0.5em;
+  background: $color-btn-background;
+  font-weight: bold;
+  height: 4vw;
+  width: 8vw;
+  border: 0.3vw solid silver;
+  border-style: outset;
+  border-radius: 20px;
+  box-shadow: 0.2vw 0.2vw 0.4vw #000000;
+  &:hover {
+    background: $color-btn-hover;
+  }
+  a:link,
+  a:visited,
+  a:active {
+    text-decoration: none;
+  }
+}

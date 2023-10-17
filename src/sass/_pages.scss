@@ -1,0 +1,17 @@
+// homepage.js
+.main {
+  @extend .flexColumn;
+  .board {
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+    margin-bottom: 3.5vw;
+  }
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}

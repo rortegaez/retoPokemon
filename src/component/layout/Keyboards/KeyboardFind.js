@@ -13,7 +13,7 @@ import BtnChangeFind from "../../../component/element/buttons/BtnChangeFind/inde
 import BtnBack from "../../element/buttons/BtnBack";
 
 //import styles
-import styles from "./keyboardfind.module.css";
+import styles from "../KeyboardFind/keyboardfind.module.css";
 
 const KeyboardFind = () => {
   const { list, listPok, handleRefresh, fetchPoke } = usePok();
