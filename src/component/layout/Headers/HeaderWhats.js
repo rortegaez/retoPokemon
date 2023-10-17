@@ -1,3 +1,4 @@
+// import css en header.scss
 import "../../../index.css";
 
 const HeaderWhats = () => {

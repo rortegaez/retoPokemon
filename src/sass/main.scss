@@ -1,5 +1,6 @@
 $color-background: #abf3b4;
 $color-app: #0cdf28;
+$color-keyboard: #21ed98;
 $color-btn-background: #da16b6;
 $color-btn-hover: #f598e4;
 
@@ -18,7 +19,7 @@ body {
   @extend .flexColumn;
   background: $color-background;
 }
-.mainContainer {
+.mainCont {
   background: $color-app;
   width: 80vw;
   margin-top: 5vh;

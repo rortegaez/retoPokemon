@@ -12,8 +12,8 @@ import CardFind from "../../element/Cards/CardFind/index";
 import BtnChangeFind from "../../../component/element/buttons/BtnChangeFind/index";
 import BtnBack from "../../element/buttons/BtnBack";
 
-//import styles
-import styles from "../KeyboardFind/keyboardfind.module.css";
+// import css en keyboard.scss
+import "../../../index.css"
 
 const KeyboardFind = () => {
   const { list, listPok, handleRefresh, fetchPoke } = usePok();
@@ -43,14 +43,14 @@ const KeyboardFind = () => {
   return (
     <div>
       {chck && <Confetti />}
-      <div className={styles.mainContainer}>
-        <div className={styles.keyboardFind}>
+      <div className='mainContainerKeyboards'>
+        <div className='keyboardFind'>
           {list.map((item, index) => (
             <CardFind
               key={index}
               ident={index}
               props={item.data} //todos los datos de cada pokemon
-              classname={styles.cardKeyboardFind}
+              classname='cardKeyboardFind'
               check={check}
               solved={solved}
               selectId={selectId}
@@ -58,10 +58,9 @@ const KeyboardFind = () => {
             />
           ))}
         </div>
-        <div className={styles.containerBtn}>
+        <div className='contBtn'>
           <ButtonRefreshFind
             severalUtility={severalUtility}
-            className={styles.btnRefresh}
           />
           <BtnChangeFind
             sizefind={sizefind}

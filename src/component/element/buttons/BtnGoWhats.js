@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+// import css en buttons
 import "../../../index.css";
 
 const BtnGoWhats = () => {

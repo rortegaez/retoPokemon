@@ -10,7 +10,7 @@ import "./index.css";
 
 function App() {
   return (
-      <div className="mainContainer">
+      <div className="mainCont">
         <BrowserRouter>
           <Routes>
             <Route index element={<HomePage />} />

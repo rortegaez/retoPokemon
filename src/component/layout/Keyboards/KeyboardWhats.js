@@ -9,7 +9,7 @@ import BtnBack from "../../element/buttons/BtnBack";
 //import customHooks
 import { useSize } from "../../logicalElements/customHooks/useSize";
 
-// import styles
+// import css en keyboard.scss
 import "../../../index.css"
 
 // import logic

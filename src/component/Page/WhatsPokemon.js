@@ -8,8 +8,8 @@ import "../../index.css";
 function WhatsPokemon() {
   return (
     <div className="mainContainer">
-      <HeaderWhats className="header" />
-      <KeyboardWhats className="keyboard" />
+      <HeaderWhats />
+      <KeyboardWhats />
     </div>
   );
 }
