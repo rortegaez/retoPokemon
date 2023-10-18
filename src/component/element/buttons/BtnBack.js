@@ -1,11 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-import style from "../button.module.css";
+import "../../../index.css";
 
 const BtnBack = () => {
   return (
-    <div className={style.containerBtn}>
+    <div className='containerBtn'>
       <NavLink to="/">Back</NavLink>
     </div>
   );

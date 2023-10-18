@@ -87,6 +87,56 @@
   .containerBtn a:active {
     text-decoration: none; }
 
+.mainContainerBtn {
+  font-family: "Shantell Sans", cursive;
+  font-size: auto;
+  background: #da16b6;
+  height: 60px;
+  width: 120px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-between;
+  padding: 0.5vw;
+  border: 0.3vw solid silver;
+  border-style: outset;
+  border-radius: 20px;
+  box-shadow: 0.2vw 0.2vw 0.4vw #000000; }
+  .mainContainerBtn .numberContainer {
+    background-color: #cccccc;
+    font-size: xx-large;
+    width: 60%;
+    height: 90%;
+    justify-content: center;
+    align-items: center;
+    border: 0.2vw solid silver;
+    border-style: outset;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px #000000; }
+  .mainContainerBtn .keyboardNumber {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px; }
+    .mainContainerBtn .keyboardNumber .btnOperator {
+      background-color: #cccccc;
+      width: 35px;
+      height: 35px;
+      border-radius: 10px;
+      border-style: outset;
+      border: 3px solid silver;
+      box-shadow: 1px 1px 3px #000000; }
+      .mainContainerBtn .keyboardNumber .btnOperator:hover {
+        background-color: #f598e4; }
+      .mainContainerBtn .keyboardNumber .btnOperator:active {
+        border-style: inset;
+        box-shadow: 1px 1px 3px red; }
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none; }
+
 /* botones */
 .flexColumn, .titleContainer, .main, .mainContainer, .container, .mainContainerKeyboards, .containerBtn, body {
   display: flex;

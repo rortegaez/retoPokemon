@@ -1,7 +1,7 @@
 import React from "react";
 
 //import style
-import style from "../change.module.css";
+import "../../../index.css";
 
 const BtnChangeFind = ({
   incrementFind,
@@ -19,13 +19,13 @@ const BtnChangeFind = ({
   };
 
   return (
-    <div className={style.mainContainer}>
-      <div className={style.numberContainer}>{sizefind}</div>
-      <div className={style.keyboardNumber}>
-        <button className={style.btnOperator} onClick={utilityIncrement}>
+    <div className='mainContainerBtn'>
+      <div className='numberContainer'>{sizefind}</div>
+      <div className='keyboardNumber'>
+        <button className='btnOperator' onClick={utilityIncrement}>
           +
         </button>
-        <button className={style.btnOperator} onClick={utilityDecrement}>
+        <button className='btnOperator' onClick={utilityDecrement}>
           -
         </button>
       </div>

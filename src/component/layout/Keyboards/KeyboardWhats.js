@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 // import components
 import CardWhats from "../../element/Cards/CardWhats/index";
-import ButtonRefresh from "../../element/buttons/ButtonRefresh/index.jsx";
+import ButtonRefresh from "../../element/buttons/ButtonRefresh";
 import confetti from "canvas-confetti";
 import BtnBack from "../../element/buttons/BtnBack";
 

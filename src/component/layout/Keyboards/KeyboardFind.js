@@ -7,9 +7,9 @@ import { useCheck } from "../../logicalElements/customHooks/useCheck.js";
 import { useSize } from "../../logicalElements/customHooks/useSize";
 
 //import components
-import ButtonRefreshFind from "../../../component/element/buttons/ButtonRefreshFind/";
+import ButtonRefreshFind from '../../element/buttons/BtnRefreshFind';
 import CardFind from "../../element/Cards/CardFind/index";
-import BtnChangeFind from "../../../component/element/buttons/BtnChangeFind/index";
+import BtnChangeFind from "../../element/buttons/BtnChangeFind"
 import BtnBack from "../../element/buttons/BtnBack";
 
 // import css en keyboard.scss
