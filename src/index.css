@@ -10,8 +10,14 @@
   color: transparent;
   background-image: linear-gradient(to left, #9df076, #43991a, #b4b149, #f4ed11);
   background-clip: text;
-  animation: color 3s linear infinite; }
+  animation: color 3s linear infinite;
+  background-size: 500%; }
 
+@keyframes color {
+  from {
+    background-position: 0% 50%; }
+  to {
+    background-position: 100% 50%; } }
 /* Css de los titulos de las dos pantallas de juegos */
 .titleContainer {
   box-sizing: content-box;
