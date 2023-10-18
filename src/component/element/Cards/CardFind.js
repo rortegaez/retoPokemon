@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 
 // import custom hooks
 
-//import styles
-import "./cardfind.css";
+//import sass cards
+import "../../../index.css";
 
 const CardFind = ({ props, check, solved, ident, selectId }) => {
   const [selected, setSelected] = useState(false); // donde hacemos las comprobaciones de true, para el objeto seleccionado
@@ -37,7 +37,7 @@ const CardFind = ({ props, check, solved, ident, selectId }) => {
   return (
     <>
       <div
-        className={`mainCard ${selected ? "selected" : ""} 
+        className={`mainCardFind ${selected ? "selected" : ""}
 				${disabled ? "disabled" : ""}`}
         onClick={utilities}
       >

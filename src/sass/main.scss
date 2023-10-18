@@ -8,6 +8,7 @@ $color-btn-hover: #f598e4;
 @import "./pages"; /* layout de cada pantalla */
 @import "./keyboards"; /* los diferentes opciones espacio de juego */
 @import "./buttons"; /* botones */
+@import "./cards"; /* las tarjetas que están en cada juego */
 
 .flexColumn {
   display: flex;

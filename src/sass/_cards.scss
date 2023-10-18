@@ -1,0 +1,97 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap"); */
+
+// card del find
+
+.mainCardFind {
+  width: 10vw;
+  height: 12vw;
+  background-color: yellow;
+  font-family: "Shantell Sans", cursive;
+  border: 0.5vw solid silver;
+  border-style: outset;
+  border-radius: 20px;
+  box-shadow: 0.3vw 0.3vw 3vw #000000;
+  background-image: url("../public/pokeapi.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+
+  &:hover {
+    box-shadow: 0.3vw 0.3vw 3vw yellow;
+  }
+  &:active {
+    border-style: inset;
+    box-shadow: 0.3vw 0.3vw 3vw red;
+  }
+  &.selected {
+    transform: scale(1.2);
+    background-image: none;
+    pointer-events: none;
+  }
+  &.disabled {
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .card {
+    @extend .flexColumn;
+    &.selected {
+      visibility: visible;
+    }
+    .namePok {
+      color: #0f0b9d;
+      font-size: 3vh;
+      visibility: hidden;
+      &.selected {
+        visibility: visible;
+      }
+      &.disabled {
+        visibility: hidden;
+      }
+    }
+    .imgPok {
+      width: 7vw;
+      height: 7vw;
+      visibility: hidden;
+      &.selected {
+        visibility: visible;
+      }
+      &.disabled {
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+// card Whats
+
+.mainCardWhat {
+  @extend .flexColumn;
+  background: yellow;
+  font-family: "Shantell Sans", cursive;
+  width: 10vw;
+  height: 12vw;
+  border: 0.5vw solid silver;
+  border-style: outset;
+  border-radius: 20px;
+  box-shadow: 0.3vw 0.3vw 3vw #000000;
+
+  &:hover {
+    box-shadow: 0.3vw 0.3vw 3vw yellow;
+  }
+  &:active {
+    border-style: inset;
+    box-shadow: 0.3vw 0.3vw 3vw red;
+  }
+  .cardWhat {
+    @extend .flexColumn;
+    .cardTitle {
+      color: #0f0b9d;
+      font-size: 3vh;
+    }
+
+    .imgPokemon {
+      width: 7vw;
+      height: 7vw;
+    }
+  }
+}

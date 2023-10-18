@@ -1,4 +1,4 @@
-import "./card.css";
+import "../../../index.css";
 
 const CardWhats = ({ props, checks }) => {
   const name = props.species.name;
@@ -15,8 +15,8 @@ const CardWhats = ({ props, checks }) => {
 
   return (
     <>
-      <div className="mainCard" id={`${type}`}>
-        <div id={`${type}`} onClick={utilities}>
+      <div className="mainCardWhat" id={`${type}`}>
+        <div className="cardWhat" id={`${type}`} onClick={utilities}>
           <h1 className='cardTitle'>{props.species.name}</h1>
           <img
             src={props.sprites.other.home.front_default}
