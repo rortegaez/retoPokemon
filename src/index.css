@@ -21,7 +21,7 @@
 /* Css de los titulos de las dos pantallas de juegos */
 .titleContainer {
   box-sizing: content-box;
-  height: auto;
+  height: 10vw;
   width: 70vw;
   border-radius: 30px;
   border: 1vw solid silver;
@@ -29,12 +29,10 @@
   background-color: #21ed98;
   margin-bottom: 3vw;
   margin-top: 4vw; }
-  .titleContainer .titlePokemon, .titleContainer .subTitle {
+  .titleContainer .titlePokemon {
     font-family: "Shantell Sans", cursive;
     color: #494e08;
     font-size: 10vh; }
-  .titleContainer .subTitle {
-    font-size: 4vh; }
 
 /* la cabecera de cada pantalla */
 .main .board {

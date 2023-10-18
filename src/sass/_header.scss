@@ -33,7 +33,7 @@
 .titleContainer {
   @extend .flexColumn;
   box-sizing: content-box;
-  height: auto;
+  height: 10vw;
   width: 70vw;
   border-radius: 30px;
   border: 1vw solid silver;
@@ -45,9 +45,5 @@
     font-family: "Shantell Sans", cursive;
     color: #494e08;
     font-size: 10vh;
-  }
-  .subTitle {
-    @extend .titlePokemon;
-    font-size: 4vh;
   }
 }
