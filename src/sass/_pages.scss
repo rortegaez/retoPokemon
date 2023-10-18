@@ -1,0 +1,14 @@
+// homepage.js
+.main {
+  @extend .flexColumn;
+  .board {
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+    margin-bottom: 3.5vw;
+  }
+}
+
+.mainContainer {
+  @extend .flexColumn;
+}

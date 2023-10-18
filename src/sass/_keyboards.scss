@@ -1,0 +1,36 @@
+.container {
+  @extend .flexColumn;
+  background: $color-keyboard;
+  border-style: inset;
+  border-radius: 30px;
+  border: 1vw solid silver;
+  padding: 1.3vw;
+}
+
+.mainContainerKeyboards {
+  @extend .container;
+  margin-bottom: 3vw;
+  width: 60vw;
+  .keyboards {
+    width: 50vw;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    box-sizing: border-box;
+    gap: 1vw;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 1.5vw;
+  }
+  .keyboardFind {
+    width: 50vw;
+    display: grid;
+    gap: 1vw;
+    grid-template-columns: repeat(4, 1fr);
+    padding-bottom: 1.5vw;
+  }
+  .contBtn {
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+  }
+}

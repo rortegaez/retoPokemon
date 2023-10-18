@@ -1,17 +1,16 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // import Page
-import HomePage from "./component/Page/HomePage/index";
-import WhatsPokemon from "./component/Page/WhatsPokemon/index.js";
+import HomePage from "./component/Page/HomePage";
+import WhatsPokemon from "./component/Page/WhatsPokemon";
 import FindPokemon from "./component/Page/FindPokemon";
 
 // import styles
-import "./app.css";
+import "./index.css";
 
 function App() {
   return (
-    <div className="app">
-      <div className="mainContainer">
+      <div className="mainCont">
         <BrowserRouter>
           <Routes>
             <Route index element={<HomePage />} />
@@ -20,7 +19,6 @@ function App() {
           </Routes>
         </BrowserRouter>
       </div>
-    </div>
   );
 }
 
