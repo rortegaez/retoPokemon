@@ -36,7 +36,7 @@
   .titleContainer .titlePokemon {
     font-family: "Shantell Sans", cursive;
     color: #494e08;
-    font-size: 10vh; }
+    font-size: 6vw; }
 
 @media (max-width: 550px) {
   .titleContainer {
@@ -95,7 +95,9 @@
       justify-content: center;
       align-items: center; }
     .mainContainerKeyboards .keyboardFind {
-      grid-template-columns: repeat(2, 1fr); } }
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+      align-items: center; } }
 /* los diferentes opciones espacio de juego */
 .containerBtn {
   font-family: "Shantell Sans", cursive;
@@ -136,6 +138,7 @@
     font-size: xx-large;
     width: 60%;
     height: 90%;
+    margin-right: 0.5vw;
     justify-content: center;
     align-items: center;
     border: 0.2vw solid silver;
@@ -149,8 +152,8 @@
     gap: 3px; }
     .mainContainerBtn .keyboardNumber .btnOperator {
       background-color: #cccccc;
-      width: 4vw;
-      height: 4vw;
+      width: 2vw;
+      height: 2vw;
       border-radius: 10px;
       border-style: outset;
       border: 3px solid silver;
@@ -221,7 +224,7 @@ a:active {
     visibility: visible; }
   .mainCardFind .card .namePok {
     color: #0f0b9d;
-    font-size: 3vh;
+    font-size: 2vw;
     visibility: hidden; }
     .mainCardFind .card .namePok.selected {
       visibility: visible; }
@@ -238,11 +241,14 @@ a:active {
 
 @media (max-width: 550px) {
   .mainCardFind {
-    width: 20vw;
-    height: 24vw;
-    gap: 2vw; }
-    .mainCardFind .cardWhat .cardTitle {
-      font-size: 1.5vh; } }
+    width: 35vw;
+    height: 50vw;
+    margin: 3vw; }
+    .mainCardFind .card .namePok {
+      font-size: 4vw; }
+    .mainCardFind .card .imgPok {
+      width: 25vw;
+      height: 25vw; } }
 .mainCardWhat {
   background: yellow;
   font-family: "Shantell Sans", cursive;
@@ -259,7 +265,7 @@ a:active {
     box-shadow: 0.3vw 0.3vw 3vw red; }
   .mainCardWhat .cardWhat .cardTitle {
     color: #0f0b9d;
-    font-size: 3vh; }
+    font-size: 2vw; }
   .mainCardWhat .cardWhat .imgPokemon {
     width: 7vw;
     height: 7vw; }
@@ -270,7 +276,7 @@ a:active {
     height: 50vw;
     margin: 3vw; }
     .mainCardWhat .cardWhat .cardTitle {
-      font-size: 4vh; }
+      font-size: 4vw; }
     .mainCardWhat .cardWhat .imgPokemon {
       width: 25vw;
       height: 25vw; } }
@@ -286,7 +292,7 @@ body {
 
 .mainCont {
   background: #0cdf28;
-  width: 60vw;
+  width: 80vw;
   margin-top: 5vh;
   margin-bottom: 5vh;
   border-radius: 20px; }

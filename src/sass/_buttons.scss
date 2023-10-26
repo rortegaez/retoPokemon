@@ -45,6 +45,7 @@
     font-size: xx-large;
     width: 60%;
     height: 90%;
+    margin-right: 0.5vw;
     justify-content: center;
     align-items: center;
     border: 0.2vw solid silver;
@@ -59,8 +60,8 @@
     gap: 3px;
     .btnOperator {
       background-color: #cccccc;
-      width: 4vw;
-      height: 4vw;
+      width: 2vw;
+      height: 2vw;
       border-radius: 10px;
       border-style: outset;
       border: 3px solid silver;

@@ -39,7 +39,7 @@
     }
     .namePok {
       color: #0f0b9d;
-      font-size: 3vh;
+      font-size: 2vw;
       visibility: hidden;
       &.selected {
         visibility: visible;
@@ -64,12 +64,16 @@
 
 @media (max-width: 550px) {
   .mainCardFind {
-    width: 20vw;
-    height: 24vw;
-    gap: 2vw;
-    .cardWhat {
-      .cardTitle {
-        font-size: 1.5vh;
+    width: 35vw;
+    height: 50vw;
+    margin: 3vw;
+    .card {
+      .namePok {
+        font-size: 4vw;
+      }
+      .imgPok {
+        width: 25vw;
+        height: 25vw;
       }
     }
   }
@@ -99,7 +103,7 @@
     @extend .flexColumn;
     .cardTitle {
       color: #0f0b9d;
-      font-size: 3vh;
+      font-size: 2vw;
     }
 
     .imgPokemon {
@@ -116,7 +120,7 @@
     margin: 3vw;
     .cardWhat {
       .cardTitle {
-        font-size: 4vh;
+        font-size: 4vw;
       }
       .imgPokemon {
         width: 25vw;
