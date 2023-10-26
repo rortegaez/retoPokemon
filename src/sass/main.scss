@@ -1,3 +1,5 @@
+// app.js
+
 $color-background: #abf3b4;
 $color-app: #0cdf28;
 $color-keyboard: #21ed98;
@@ -22,8 +24,14 @@ body {
 }
 .mainCont {
   background: $color-app;
-  width: 80vw;
+  width: 60vw;
   margin-top: 5vh;
   margin-bottom: 5vh;
   border-radius: 20px;
+}
+
+@media (max-width: 550px) {
+  .mainCont {
+    width: 100vw;
+  }
 }

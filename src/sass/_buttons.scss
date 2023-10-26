@@ -5,11 +5,11 @@
   @extend .flexColumn;
   font-family: "Shantell Sans", cursive;
   font-size: auto;
-  padding: 0.5em;
+  padding: 3vw;
   background: $color-btn-background;
   font-weight: bold;
-  height: 4vw;
-  width: 8vw;
+  height: 4vh;
+  width: 8vh;
   border: 0.3vw solid silver;
   border-style: outset;
   border-radius: 20px;
@@ -59,8 +59,8 @@
     gap: 3px;
     .btnOperator {
       background-color: #cccccc;
-      width: 35px;
-      height: 35px;
+      width: 4vw;
+      height: 4vw;
       border-radius: 10px;
       border-style: outset;
       border: 3px solid silver;
@@ -81,4 +81,36 @@ a:link,
 a:visited,
 a:active {
   text-decoration: none;
+}
+
+@media (max-width: 550px) {
+  .containerBtn {
+    height: 2vh;
+    width: 4vh;
+    font-weight: lighter;
+    border-radius: 10px;
+  }
+
+  .mainContainerBtn {
+    border-radius: 10px;
+    height: 30px;
+    width: 60px;
+    .numberContainer {
+      font-size: large;
+      width: 50%;
+      height: 80%;
+      margin-left: 0.8vw;
+    }
+    .keyboardNumber {
+      .btnOperator {
+        width: 2vw;
+        height: 2vw;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1vw;
+      }
+    }
+  }
 }

@@ -62,6 +62,19 @@
   }
 }
 
+@media (max-width: 550px) {
+  .mainCardFind {
+    width: 20vw;
+    height: 24vw;
+    gap: 2vw;
+    .cardWhat {
+      .cardTitle {
+        font-size: 1.5vh;
+      }
+    }
+  }
+}
+
 // card Whats
 
 .mainCardWhat {
@@ -92,6 +105,23 @@
     .imgPokemon {
       width: 7vw;
       height: 7vw;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .mainCardWhat {
+    width: 35vw;
+    height: 50vw;
+    margin: 3vw;
+    .cardWhat {
+      .cardTitle {
+        font-size: 4vh;
+      }
+      .imgPokemon {
+        width: 25vw;
+        height: 25vw;
+      }
     }
   }
 }

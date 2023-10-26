@@ -39,22 +39,23 @@
     font-size: 10vh; }
 
 @media (max-width: 550px) {
-  .titleContainer {
-    width: 80vw; }
-    .titleContainer .titlePokemon {
-      font-size: 3.5vh; } }
+  .titleContainer .titlePokemon {
+    font-size: 3.5vh; } }
 /* la cabecera de cada pantalla */
 .main .board {
   display: flex;
   flex-direction: row;
   gap: 5vw;
   margin-bottom: 3.5vw; }
-.main .pokeapi {
-  padding-bottom: 3.5vw; }
 
-@media (max-width: 550px) {
+/* @media (max-width: 550px) {
+  .main {
+    // width: 100%;
+  }
   .mainContainer {
-    width: 100vw; } }
+    width: 100%;
+  }
+} */
 /* layout de cada pantalla */
 .container, .mainContainerKeyboards {
   background: #21ed98;
@@ -86,16 +87,15 @@
     flex-direction: row;
     gap: 1vw; }
 
-@media (max-width: 550px) {
+/* @media (max-width: 550px) {
   .mainContainerKeyboards {
-    width: 90vw; }
-    .mainContainerKeyboards .keyboards {
-      gap: 1vw;
+    background: red;
+    width: 100vw;
+    .keyboardFind {
       grid-template-columns: repeat(2, 1fr);
-      justify-content: center;
-      align-items: center; }
-    .mainContainerKeyboards .keyboardFind {
-      grid-template-columns: repeat(2, 1fr); } }
+    }
+  }
+} */
 /* los diferentes opciones espacio de juego */
 .containerBtn {
   font-family: "Shantell Sans", cursive;
@@ -149,8 +149,8 @@
     gap: 3px; }
     .mainContainerBtn .keyboardNumber .btnOperator {
       background-color: #cccccc;
-      width: 4vw;
-      height: 4vw;
+      width: 35px;
+      height: 35px;
       border-radius: 10px;
       border-style: outset;
       border: 3px solid silver;
@@ -166,30 +166,6 @@ a:visited,
 a:active {
   text-decoration: none; }
 
-@media (max-width: 550px) {
-  .containerBtn {
-    height: 2vh;
-    width: 4vh;
-    font-weight: lighter;
-    border-radius: 10px; }
-
-  .mainContainerBtn {
-    border-radius: 10px;
-    height: 30px;
-    width: 60px; }
-    .mainContainerBtn .numberContainer {
-      font-size: large;
-      width: 50%;
-      height: 80%;
-      margin-left: 0.8vw; }
-    .mainContainerBtn .keyboardNumber .btnOperator {
-      width: 2vw;
-      height: 2vw;
-      border-radius: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 1vw; } }
 /* botones */
 /* @import url("https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap"); */
 .mainCardFind {
@@ -264,16 +240,6 @@ a:active {
     width: 7vw;
     height: 7vw; }
 
-@media (max-width: 550px) {
-  .mainCardWhat {
-    width: 35vw;
-    height: 50vw;
-    margin: 3vw; }
-    .mainCardWhat .cardWhat .cardTitle {
-      font-size: 4vh; }
-    .mainCardWhat .cardWhat .imgPokemon {
-      width: 25vw;
-      height: 25vw; } }
 /* las tarjetas que están en cada juego */
 .flexColumn, .titleContainer, .main, .mainContainer, .container, .mainContainerKeyboards, .containerBtn, .mainCardFind .card, .mainCardWhat, .mainCardWhat .cardWhat, body {
   display: flex;
@@ -293,6 +259,7 @@ body {
 
 @media (max-width: 550px) {
   .mainCont {
-    width: 100vw; } }
+    background: red;
+    width: 100%; } }
 
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=..index.css.map */

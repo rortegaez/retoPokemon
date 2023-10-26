@@ -34,3 +34,18 @@
     gap: 1vw;
   }
 }
+
+@media (max-width: 550px) {
+  .mainContainerKeyboards {
+    width: 90vw;
+    .keyboards {
+      gap: 1vw;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+      align-items: center;
+    }
+    .keyboardFind {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

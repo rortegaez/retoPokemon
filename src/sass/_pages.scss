@@ -1,4 +1,5 @@
 // homepage.js
+
 .main {
   @extend .flexColumn;
   .board {
@@ -7,8 +8,17 @@
     gap: 5vw;
     margin-bottom: 3.5vw;
   }
+  .pokeapi {
+    padding-bottom: 3.5vw;
+  }
 }
 
 .mainContainer {
   @extend .flexColumn;
+}
+
+@media (max-width: 550px) {
+  .mainContainer {
+    width: 100vw;
+  }
 }

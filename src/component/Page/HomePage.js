@@ -1,4 +1,6 @@
 import React from "react";
+// import logo from '../../../public/pokeapi.png'
+
 import MainHeader from "../layout/Headers/MainHeader";
 import BtnGoWhats from "../element/buttons/BtnGoWhats";
 import BtnGoFind from "../element/buttons/BtnGoFind";
@@ -16,6 +18,7 @@ export const HomePage = () => {
         <BtnGoWhats />
         <BtnGoFind />
       </section>
+      <img src='../../pokeapi.png' alt="logo pokeapi" className="pokeapi"/>
     </div>
   );
 };
