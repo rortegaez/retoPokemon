@@ -2,13 +2,13 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 // import css en buttons
-import "../../../index.css";
+import "./buttons.css";
 
 const BtnGoWhats = () => {
   return (
     <>
       <div className='containerBtn'>
-        <NavLink to="findpokemon">Find Pokemon</NavLink>
+        <NavLink to="findpokemon" className='nameBtn'>Find Pokemon</NavLink>
       </div>
     </>
   );
