@@ -1,8 +1,8 @@
 import React from "react";
 
 //import layout
-import KeyboardFind from "../layout/Keyboards/KeyboardFind";
 import HeaderFind from "../layout/Headers/HeaderFind";
+import KeyboardFind from "../layout/Keyboards/KeyboardFind";
 
 // import css pages.scss
 import '../../index.css';

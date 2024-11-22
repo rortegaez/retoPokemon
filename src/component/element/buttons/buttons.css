@@ -1,9 +1,12 @@
 .containerBtn {
+  box-sizing: border-box;
   background-color: var(--bg-pink);
-  padding-top: 3vh;
-  padding-bottom: 3vh;
-  padding-left: 2vw;
-  padding-right: 2vw;
+  width: 15vw;
+  height: 10vh;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  align-items: center;
+  justify-items: center;
   border-radius: 8%;
   border-style: outset;
   border: 3px solid silver;

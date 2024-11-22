@@ -7,9 +7,9 @@ import "./buttons.css";
 const BtnGoWhats = () => {
   return (
     <>
-      <div className='containerBtn'>
-        <NavLink to="findpokemon" className='nameBtn'>Find Pokemon</NavLink>
-      </div>
+      <NavLink to="findpokemon" className='containerBtn'>
+        <p className="nameBtn">Find</p>
+      </NavLink>
     </>
   );
 };

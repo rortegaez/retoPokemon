@@ -1,0 +1,20 @@
+.mainCardWhat {
+  background-color: pink;
+  border: 5px inset red;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.cardWhat {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  padding-bottom: 3cm;
+}
+.cardTitle {
+  font-family: "Darumadrop One";
+  font-size: 5vh;
+  font-weight: 100;
+  color: var(--color-font);
+}
