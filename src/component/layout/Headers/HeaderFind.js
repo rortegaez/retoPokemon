@@ -1,5 +1,5 @@
 // import css en header.scss
-import "../../../index.css";
+import "./headers.css";
 
 const HeaderWhats = () => {
   return (

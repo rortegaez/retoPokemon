@@ -1,13 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-import "../../../index.css";
+import "./buttons.css";
 
 const BtnBack = () => {
   return (
-    <div className='containerBtn'>
-      <NavLink to="/">Back</NavLink>
-    </div>
+    <NavLink to='/' className='containerBtn'>
+      <p className="nameBtn">Back</p>
+    </NavLink>
   );
 };
 

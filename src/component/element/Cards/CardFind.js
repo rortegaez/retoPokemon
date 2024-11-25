@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 // import custom hooks
 
 //import sass cards
-import "../../../index.css";
+import "./card.css";
 
 const CardFind = ({ props, check, solved, ident, selectId }) => {
   const [selected, setSelected] = useState(false); // donde hacemos las comprobaciones de true, para el objeto seleccionado

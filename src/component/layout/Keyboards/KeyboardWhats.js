@@ -1,20 +1,20 @@
 import { useEffect, useState } from "react";
 
 // import components
-import CardWhats from "../../element/Cards/CardWhat";
-import ButtonRefresh from "../../element/buttons/ButtonRefresh";
 import confetti from "canvas-confetti";
+import CardWhats from "../../element/Cards/CardWhat";
 import BtnBack from "../../element/buttons/BtnBack";
+import ButtonRefresh from "../../element/buttons/ButtonRefresh";
 
 //import customHooks
 import { useSize } from "../../logicalElements/customHooks/useSize";
 
 // import css en keyboard.scss
-import "../../../index.css"
+import "./keyboards.css";
 
 // import logic
-import fetchPokemon from "../../logicalElements/logic/fetchPokemon";
 import BtnChangeWhats from "../../element/buttons/BtnChangeWhats";
+import fetchPokemon from "../../logicalElements/logic/fetchPokemon";
 
 const Keyboard = () => {
   const [list, setList] = useState([]);

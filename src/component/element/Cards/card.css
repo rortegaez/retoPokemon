@@ -1,20 +1,93 @@
 .mainCardWhat {
-  background-color: pink;
-  border: 5px inset red;
+  box-sizing: border-box;
+  width: 7vw;
+  height: 10vw;
+  background-color: #ffc0cb;
+  border: 5px inset #ff0000;
   border-radius: 10px;
   margin-top: 10px;
 }
+
+/* ------------ */
+.mainCardFind {
+  width: 7vw;
+  height: 10vw;
+  background-color: yellow;
+  font-family: "Shantell Sans", cursive;
+  border: 0.5vw solid silver;
+  border-style: outset;
+  border-radius: 20px;
+  box-shadow: 0.3vw 0.3vw 3vw #000000;
+  background-image: url("../../../pokeapi.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  &:hover {
+    box-shadow: 0.3vw 0.3vw 3vw yellow;
+  }
+  &:active {
+    border-style: inset;
+    box-shadow: 0.3vw 0.3vw 3vw red;
+  }
+  &.selected {
+    transform: scale(1.2);
+    background-image: none;
+    pointer-events: none;
+  }
+  &.disabled {
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &.selected {
+    visibility: visible;
+  }
+  .namePok {
+    color: #0f0b9d;
+    font-size: 2vw;
+    visibility: hidden;
+    &.selected {
+      visibility: visible;
+    }
+    &.disabled {
+      visibility: hidden;
+    }
+  }
+  .imgPok {
+    width: 7vw;
+    height: 7vw;
+    visibility: hidden;
+    &.selected {
+      visibility: visible;
+    }
+    &.disabled {
+      visibility: hidden;
+    }
+  }
+}
+
+/* -------------------- */
 .cardWhat {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-items: center;
-  padding-bottom: 3cm;
+  padding-bottom: 3vh;
 }
 .cardTitle {
-  font-family: "Darumadrop One";
-  font-size: 5vh;
-  font-weight: 100;
+  font-family: "Shantell Sans";
+  font-size: 1vw;
+  font-weight: lighter;
   color: var(--color-font);
+}
+.imgPokemon {
+  box-sizing: border-box;
+  width: 5vw;
 }

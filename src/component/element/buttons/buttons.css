@@ -1,16 +1,19 @@
+/* Botones what y find */
+
 .containerBtn {
   box-sizing: border-box;
   background-color: var(--bg-pink);
-  width: 15vw;
-  height: 10vh;
+  width: 8vw;
+  height: 8vh;
   padding-left: 1vw;
   padding-right: 1vw;
   align-items: center;
   justify-items: center;
-  border-radius: 8%;
+  border-radius: 10px;
   border-style: outset;
   border: 3px solid silver;
   box-shadow: 1px 1px 3px #000000;
+  margin: 1vh;
 }
 .containerBtn:hover {
   background-color: var(--bg-lightPink);
@@ -24,4 +27,20 @@
   color: var(--color-font);
   font-family: var(--second-font);
   font-weight: bold;
+}
+.numberContainer {
+  background-color: #faf8f8;
+  margin-top: 5px;
+  margin-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 5px;
+}
+.btnOperator {
+  background-color: #f7b0e1;
+  width: 30px;
+  height: 20px;
+  margin-left: 5px;
+  border-radius: 5px;
+  margin-top: 5px;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 
 //import style
-import "../../../index.css";
+import './buttons.css';
 
 const ButtonRefresh = ({ severalUtility }) => {
   const utility = () => {
@@ -9,8 +9,8 @@ const ButtonRefresh = ({ severalUtility }) => {
   };
 
   return (
-    <div className='containerBtn'>
-      <div onClick={utility}>Refresh</div>
+    <div onClick={utility} className="containerBtn">
+      <span className='nameBtn'>Back</span>
     </div>
   );
 };

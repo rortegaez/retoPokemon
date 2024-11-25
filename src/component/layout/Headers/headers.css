@@ -17,6 +17,18 @@
   background-size: 500%;
 }
 
+/* header layout */
+.titleContainer {
+  justify-items: center;
+}
+.titlePokemon {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  font-family: "Darumadrop One";
+}
+
 @keyframes color {
   from {
     background-position: 0% 50%;
