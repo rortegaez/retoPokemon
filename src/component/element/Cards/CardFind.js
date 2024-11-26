@@ -37,7 +37,7 @@ const CardFind = ({ props, check, solved, ident, selectId }) => {
   return (
     <>
       <div
-        className={`mainCardFind ${selected ? "selected" : ""}
+        className={`mainCard Find ${selected ? "selected" : ""}
 				${disabled ? "disabled" : ""}`}
         onClick={utilities}
       >

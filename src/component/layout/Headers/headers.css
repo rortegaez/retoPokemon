@@ -20,13 +20,14 @@
 /* header layout */
 .titleContainer {
   justify-items: center;
-}
-.titlePokemon {
-  display: flex;
-  flex-direction: row;
-  justify-items: center;
   align-items: center;
-  font-family: "Darumadrop One";
+  box-sizing: content-box;
+  margin-top: 4vw;
+  .titlePokemon {
+    font-family: "Shantell Sans", cursive;
+    color: #494e08;
+    font-size: 3vw;
+  }
 }
 
 @keyframes color {

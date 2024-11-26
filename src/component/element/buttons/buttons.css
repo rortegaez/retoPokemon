@@ -14,6 +14,11 @@
   border: 3px solid silver;
   box-shadow: 1px 1px 3px #000000;
   margin: 1vh;
+  .nameBtn {
+    color: var(--color-font);
+    font-family: var(--second-font);
+    font-weight: bold;
+  }
 }
 .containerBtn:hover {
   background-color: var(--bg-lightPink);
@@ -23,11 +28,6 @@
   box-shadow: 1px 1px 3px red;
 }
 
-.nameBtn {
-  color: var(--color-font);
-  font-family: var(--second-font);
-  font-weight: bold;
-}
 .numberContainer {
   background-color: #faf8f8;
   margin-top: 5px;

@@ -15,13 +15,13 @@ const CardWhats = ({ props, checks }) => {
 
   return (
     <>
-      <div className="mainCardWhat" id={`${type}`}>
-        <div className="cardWhat" id={`${type}`} onClick={utilities}>
-          <h1 className='cardTitle'>{props.species.name}</h1>
+      <div className="mainCard" id={`${type}`}>
+        <div className="card" id={`${type}`} onClick={utilities}>
+          <h1 className='namePok nameWhat'>{props.species.name}</h1>
           <img
             src={props.sprites.other.home.front_default}
             alt={props.species.name}
-            className="imgPokemon"
+            className="imgPok imgWhat"
           />
         </div>
       </div>

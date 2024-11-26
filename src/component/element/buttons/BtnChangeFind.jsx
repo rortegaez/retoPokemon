@@ -19,13 +19,13 @@ const BtnChangeFind = ({
   };
 
   return (
-    <div className='mainContainerBtn'>
-      <div className='numberContainer'>{sizefind}</div>
-      <div className='keyboardNumber'>
-        <button className='btnOperator' onClick={utilityIncrement}>
+    <div className="mainContainerBtn">
+      <div className="numberContainer">{sizefind}</div>
+      <div className="keyboardNumber">
+        <button className="btnOperator" onClick={utilityIncrement}>
           +
         </button>
-        <button className='btnOperator' onClick={utilityDecrement}>
+        <button className="btnOperator" onClick={utilityDecrement}>
           -
         </button>
       </div>

@@ -2,18 +2,18 @@ import React, { useEffect, useState } from "react";
 import Confetti from "react-confetti";
 
 // import customHooks
-import { usePok } from "../../logicalElements/customHooks/usePok";
 import { useCheck } from "../../logicalElements/customHooks/useCheck.js";
+import { usePok } from "../../logicalElements/customHooks/usePok";
 import { useSize } from "../../logicalElements/customHooks/useSize";
 
 //import components
+import BtnBack from "../../element/buttons/BtnBack";
+import BtnChangeFind from "../../element/buttons/BtnChangeFind";
 import ButtonRefreshFind from '../../element/buttons/BtnRefreshFind';
 import CardFind from "../../element/Cards/CardFind";
-import BtnChangeFind from "../../element/buttons/BtnChangeFind"
-import BtnBack from "../../element/buttons/BtnBack";
 
 // import css en keyboard.scss
-import "../../../index.css"
+import "../../../index.css";
 
 const KeyboardFind = () => {
   const { list, listPok, handleRefresh, fetchPoke } = usePok();

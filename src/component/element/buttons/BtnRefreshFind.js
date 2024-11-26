@@ -10,7 +10,7 @@ const ButtonRefresh = ({ severalUtility }) => {
 
   return (
     <div onClick={utility} className="containerBtn">
-      <span className='nameBtn'>Back</span>
+      <span className='nameBtn'>Refesh</span>
     </div>
   );
 };
