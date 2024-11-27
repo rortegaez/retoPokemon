@@ -6,7 +6,7 @@ export const useSize = () => {
 
   const incrementFind = () => {
     if (sizefind >= 12) {
-      return null;
+      return setSizefind(sizefind)
     } else {
       return setSizefind(sizefind + 4);
     }
@@ -14,7 +14,7 @@ export const useSize = () => {
 
   const decrementFind = () => {
     if (sizefind <= 4) {
-      return null;
+      return setSizefind(sizefind);
     } else {
       return setSizefind(sizefind - 4);
     }

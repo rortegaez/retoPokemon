@@ -7,7 +7,7 @@ import "./buttons.css";
 const BtnGoWhats = () => {
   return (
     <>
-      <NavLink to="findpokemon" className='containerBtn'>
+      <NavLink to="findpokemon" className="containerBtn">
         <p className="nameBtn">Find</p>
       </NavLink>
     </>

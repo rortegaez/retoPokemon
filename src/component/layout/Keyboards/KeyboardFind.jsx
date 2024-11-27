@@ -3,14 +3,14 @@ import Confetti from "react-confetti";
 
 // import customHooks
 import { useCheck } from "../../logicalElements/customHooks/useCheck.js";
-import { usePok } from "../../logicalElements/customHooks/usePok";
-import { useSize } from "../../logicalElements/customHooks/useSize";
+import { usePok } from "../../logicalElements/customHooks/usePok.js";
+import { useSize } from "../../logicalElements/customHooks/useSize.js";
 
 //import components
-import BtnBack from "../../element/buttons/BtnBack";
-import BtnChangeFind from "../../element/buttons/BtnChangeFind";
-import ButtonRefreshFind from '../../element/buttons/BtnRefreshFind';
-import CardFind from "../../element/Cards/CardFind";
+import BtnBack from "../../element/buttons/BtnBack.jsx";
+import BtnChangeFind from "../../element/buttons/BtnChangeFind.jsx";
+import ButtonRefreshFind from "../../element/buttons/BtnRefreshFind.jsx";
+import CardFind from "../../element/Cards/CardFind.jsx";
 
 // import css en keyboard.scss
 import "../../../index.css";
@@ -43,14 +43,14 @@ const KeyboardFind = () => {
   return (
     <div>
       {chck && <Confetti />}
-      <div className='mainContainerKeyboards'>
-        <div className='keyboardFind'>
+      <div className="mainContainerKeyboards">
+        <div className="keyboardFind">
           {list.map((item, index) => (
             <CardFind
               key={index}
               ident={index}
               props={item.data} //todos los datos de cada pokemon
-              classname='cardKeyboardFind'
+              classname="cardKeyboardFind"
               check={check}
               solved={solved}
               selectId={selectId}
@@ -58,10 +58,8 @@ const KeyboardFind = () => {
             />
           ))}
         </div>
-        <div className='contBtn'>
-          <ButtonRefreshFind
-            severalUtility={severalUtility}
-          />
+        <div className="contBtn">
+          <ButtonRefreshFind severalUtility={severalUtility} />
           <BtnChangeFind
             sizefind={sizefind}
             incrementFind={incrementFind}

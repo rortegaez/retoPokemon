@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-// import custom hooks
-
 //import sass cards
 import "./card.css";
 
