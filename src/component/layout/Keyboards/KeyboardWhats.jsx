@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 
 // import components
 import confetti from "canvas-confetti";
-import CardWhats from "../../element/Cards/CardWhat";
 import BtnBack from "../../element/buttons/BtnBack";
 import ButtonRefresh from "../../element/buttons/ButtonRefresh";
+import { Card } from "../../element/Cards/Card";
 
 //import customHooks
 import { useSize } from "../../logicalElements/customHooks/useSize";
@@ -50,10 +50,10 @@ const Keyboard = () => {
 
   return (
     <>
-      <div className='mainContainerKeyboards'>
-        <div className='keyboards'>
+      <div className="mainContainerKeyboards">
+        <div className="keyboards">
           {list.map((item, index) => (
-            <CardWhats
+            <Card
               key={index}
               id={index}
               props={item.data}
@@ -62,10 +62,8 @@ const Keyboard = () => {
           ))}
         </div>
 
-        <div className='contBtn'>
-          <ButtonRefresh
-            handleRefresh={handleRefrest}
-          />
+        <div className="contBtn">
+          <ButtonRefresh handleRefresh={handleRefrest} />
           <BtnChangeWhats
             incrementWhat={incrementWhat}
             decrementWhat={decrementWhat}

@@ -13,5 +13,13 @@ export const Card = ({ props }) => {
     setPosition(places.pathname);
   }, []);
 
-  return <>{position === "what" ? <CardWhats /> : <CardFind />}</>;
+  return (
+    <>
+      {position === "what" ? (
+        <CardWhats props={props} />
+      ) : (
+        <CardFind props={props} />
+      )}
+    </>
+  );
 };

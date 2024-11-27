@@ -1,6 +1,6 @@
 import "./card.css";
 
-const CardWhats = ({ props, checks }) => {
+const CardWhats = ({ props }) => {
   const name = props.species.name;
   const synth = window.speechSynthesis;
   const utterThis = new SpeechSynthesisUtterance(name);
@@ -8,7 +8,7 @@ const CardWhats = ({ props, checks }) => {
 
   const utilities = () => {
     synth.speak(utterThis);
-    checks();
+    props.checks();
   };
 
   let type = props.types[0].type.name;
@@ -17,7 +17,7 @@ const CardWhats = ({ props, checks }) => {
     <>
       <div className="mainCard" id={`${type}`}>
         <div className="card" id={`${type}`} onClick={utilities}>
-          <h1 className='namePok nameWhat'>{props.species.name}</h1>
+          <h1 className="namePok nameWhat">{props.species.name}</h1>
           <img
             src={props.sprites.other.home.front_default}
             alt={props.species.name}

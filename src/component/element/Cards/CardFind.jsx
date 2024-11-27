@@ -3,12 +3,12 @@ import React, { useEffect, useState } from "react";
 //import sass cards
 import "./card.css";
 
-const CardFind = ({ props, check, solved, ident, selectId }) => {
+const CardFind = ({ props }) => {
   const [selected, setSelected] = useState(false); // donde hacemos las comprobaciones de true, para el objeto seleccionado
   const [disabled, setDisabled] = useState(false); // donde hacemos las comprobaciones de true, para los objetos ganadores
 
   const testSolved = (num) => {
-    if (solved.includes(num)) {
+    if (props.solved?.includes(num)) {
       setDisabled(true);
     } else {
       setDisabled(false);
@@ -16,7 +16,7 @@ const CardFind = ({ props, check, solved, ident, selectId }) => {
   };
 
   const testSelect = () => {
-    if (selectId.includes(ident)) {
+    if (props.selectId?.includes(props.ident)) {
       setSelected(true);
     } else {
       setTimeout(() => setSelected(false), 500);
@@ -26,10 +26,10 @@ const CardFind = ({ props, check, solved, ident, selectId }) => {
   useEffect(() => {
     testSelect();
     testSolved(props.id);
-  }, [selectId, solved]);
+  }, [props.selectId, props.solved]);
 
   const utilities = () => {
-    check(props.id, ident);
+    props.check(props.id, props.ident);
   };
 
   return (
