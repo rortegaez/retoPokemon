@@ -9,6 +9,48 @@
   border-radius: 20px;
   box-shadow: 0.3vw 0.3vw 3vw #000000;
   margin-top: 1.5vh;
+  &.ground {
+    background-color: var(--type-ground);
+  }
+  &.bug {
+    background-color: var(--type-bug);
+  }
+  &.dark {
+    background-color: var(--type-dark);
+  }
+  &.electric {
+    background-color: var(--type-dark);
+  }
+  &.fairy {
+    background-color: var(--type-fairy);
+  }
+  &.fighting {
+    background-color: var(--type-fighting);
+  }
+  &.water {
+    background-color: var(--type-water);
+  }
+  &.ice {
+    background-color: var(--type-ice);
+  }
+  &.grass {
+    background-color: var(--type-grass);
+  }
+  &.psychic {
+    background-color: var(--type-psychic);
+  }
+  &.ghost {
+    background-color: var(--type-ghost);
+  }
+  &.rock {
+    background-color: var(--type-rock);
+  }
+  &.fire {
+    background-color: var(--type-fire);
+  }
+  .steel {
+    background-color: var(--type-steel);
+  }
   &:hover {
     box-shadow: 0.3vw 0.3vw 3vw yellow;
   }

@@ -10,6 +10,20 @@
   --color-font: #300fef;
   --main-font: "Duramadrop One";
   --second-font: "Shantell Sans";
+  --type-ground: #7d760a;
+  --type-bug: #646e65;
+  --type-dark: #000000;
+  --type-electric: #dae378;
+  --type-fairy: #eeb4ea;
+  --type-fighting: #eb2020;
+  --type-water: #1775b5;
+  --type-ice: #7ab8e1;
+  --type-grass: #81e780;
+  --type-psychic: #c36ce8;
+  --type-ghost: #e0edf6;
+  --type-rock: #696a6b;
+  --type-fire: #780a20;
+  --type-steel: #e3ecf1;
 }
 
 a:link,

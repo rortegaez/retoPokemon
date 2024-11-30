@@ -4,8 +4,10 @@ import "./card.css";
 import CardFind from "./CardFind";
 import CardWhats from "./CardWhat";
 
-export const Card = ({ props }) => {
+const Card = ({ props, check, solved, ident, selectId, checks }) => {
   const places = useLocation();
+
+  console.log(places, "places");
 
   const [position, setPosition] = useState("");
 
@@ -15,11 +17,19 @@ export const Card = ({ props }) => {
 
   return (
     <>
-      {position === "what" ? (
-        <CardWhats props={props} />
+      {position === "whatspokemon" ? (
+        <CardWhats props={props} checks={checks} />
       ) : (
-        <CardFind props={props} />
+        <CardFind
+          props={props}
+          solved={solved}
+          ident={ident}
+          selectId={selectId}
+          check={check}
+        />
       )}
     </>
   );
 };
+
+export default Card;

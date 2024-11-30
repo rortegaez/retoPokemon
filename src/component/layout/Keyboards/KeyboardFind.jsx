@@ -10,8 +10,7 @@ import { useSize } from "../../logicalElements/customHooks/useSize.js";
 import BtnBack from "../../element/buttons/BtnBack.jsx";
 import BtnChangeFind from "../../element/buttons/BtnChangeFind.jsx";
 import ButtonRefreshFind from "../../element/buttons/BtnRefreshFind.jsx";
-// import CardFind from "../../element/Cards/CardFind.jsx";
-import { Card } from "../../element/Cards/Card.jsx";
+import CardFind from "../../element/Cards/CardFind.jsx";
 
 // import css en keyboard.scss
 import "../../../index.css";
@@ -47,7 +46,7 @@ const KeyboardFind = () => {
       <div className="mainContainerKeyboards">
         <div className="keyboardFind">
           {list.map((item, index) => (
-            <Card
+            <CardFind
               key={index}
               ident={index}
               props={item.data} //todos los datos de cada pokemon
