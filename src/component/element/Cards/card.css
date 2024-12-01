@@ -114,3 +114,14 @@
     }
   }
 }
+
+@media (max-width: 400px) {
+  .mainCard {
+    width: 25vw;
+    height: 20vh;
+  }
+  /*   .imgPok {
+    width: 20vw;
+    height: 15vh;
+  } */
+}

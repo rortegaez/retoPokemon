@@ -23,3 +23,9 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 1vw;
 }
+
+/* @media (max-width: 400px) {
+  .keyboards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+} */

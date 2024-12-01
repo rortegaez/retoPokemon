@@ -9,8 +9,8 @@ const ButtonRefresh = ({ handleRefresh }) => {
   };
 
   return (
-    <div className="containerBtn">
-      <div onClick={utility}>Refresh</div>
+    <div onClick={utility} className="containerBtn">
+      <p className="nameBtn">Refresh</p>
     </div>
   );
 };

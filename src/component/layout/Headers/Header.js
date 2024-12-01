@@ -17,7 +17,7 @@ const Header = () => {
 
   return (
     <div className="titleContainer">
-      <h1 className="titlePokemon">{whats ? 'Como te llamos' : 'Encuentra mi pareja'}</h1>
+      <h1 className="titlePokemon">{whats ? '¿Como te llamas?' : 'Encuentra mi pareja'}</h1>
     </div>
   );
 };

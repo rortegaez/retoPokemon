@@ -14,11 +14,11 @@
   border: 3px solid silver;
   box-shadow: 1px 1px 3px #000000;
   margin: 1vh;
-  .nameBtn {
-    color: var(--color-font);
-    font-family: var(--second-font);
-    font-weight: bold;
-  }
+}
+.nameBtn {
+  color: var(--color-font);
+  font-family: var(--second-font);
+  font-weight: bold;
 }
 .containerBtn:hover {
   background-color: var(--bg-lightPink);
@@ -43,4 +43,10 @@
   margin-left: 5px;
   border-radius: 5px;
   margin-top: 5px;
+}
+
+@media (max-width: 400px) {
+  .containerBtn {
+    width: 100px;
+  }
 }

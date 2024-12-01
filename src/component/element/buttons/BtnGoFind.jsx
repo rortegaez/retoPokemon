@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 // import css en buttons
 import "./buttons.css";
 
-const BtnGoWhats = () => {
+const BtnGoFind = () => {
   return (
     <>
       <NavLink to="findpokemon" className="containerBtn">
@@ -14,4 +14,4 @@ const BtnGoWhats = () => {
   );
 };
 
-export default BtnGoWhats;
+export default BtnGoFind;
