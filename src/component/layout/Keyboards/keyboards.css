@@ -24,8 +24,8 @@
   gap: 1vw;
 }
 
-/* @media (max-width: 400px) {
-  .keyboards {
+@media (max-width: 500px) {
+  .keyboardFind {
     grid-template-columns: repeat(2, 1fr);
   }
-} */
+}

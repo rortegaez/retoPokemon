@@ -37,7 +37,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
 }
 
 /* Este es el estilo de App */
@@ -46,6 +45,7 @@ body {
   box-sizing: border-box;
   border-radius: 10px;
   padding: 5vh;
+  height: auto;
 }
 
 /* Este es el estilo de HomePage */
@@ -56,7 +56,8 @@ body {
   align-items: center;
 }
 .mainContainer {
-  height: 100vh;
+  box-sizing: border-box;
+  height: 150vh;
 }
 
 .board {
@@ -80,5 +81,8 @@ body {
   .board {
     display: flex;
     flex-direction: column;
+  }
+  .pokeapi {
+    width: 50vw;
   }
 }

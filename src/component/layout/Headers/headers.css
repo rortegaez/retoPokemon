@@ -38,9 +38,10 @@
     background-position: 100% 50%;
   }
 }
+
 @media (max-width: 550px) {
   .titleMainHeader {
-    font-size: 5vh;
+    font-size: 20vw;
     -webkit-text-stroke: 0.1vh #308208;
   }
 }

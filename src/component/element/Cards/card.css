@@ -115,13 +115,22 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .mainCard {
     width: 25vw;
     height: 20vh;
+    &.Find {
+      width: 25vw;
+      height: 20vh;
+    }
   }
-  /*   .imgPok {
-    width: 20vw;
-    height: 15vh;
-  } */
+  .card {
+    .namePok {
+      font-size: 5vw;
+    }
+    .imgPok {
+      width: 20vw;
+      height: 20vw;
+    }
+  }
 }
