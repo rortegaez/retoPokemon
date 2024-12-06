@@ -1,6 +1,6 @@
 // aquí cargamos los pokemos que vamos a buscar a la api, a través de la logic
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 //import customHooks
 import { useSize } from "../../logicalElements/customHooks/useSize";

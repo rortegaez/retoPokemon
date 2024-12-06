@@ -11,6 +11,8 @@ const CardWhats = ({ props, checks }) => {
     checks();
   };
 
+  console.log(props, "props");
+
   let type = props.types[0].type.name;
 
   console.log(type, "type");

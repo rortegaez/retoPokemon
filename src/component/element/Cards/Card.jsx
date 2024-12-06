@@ -7,8 +7,6 @@ import CardWhats from "./CardWhat";
 const Card = ({ props, check, solved, ident, selectId, checks }) => {
   const places = useLocation();
 
-  console.log(places, "places");
-
   const [position, setPosition] = useState("");
 
   useEffect(() => {
