@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { BtnType } from "../../element/buttons/BtnType";
 import { getTypePokemon } from "../../logicalElements/enpoint/getPokemon";
+import { fetchPokemonData } from "../../logicalElements/enpoint/typeLogic";
 
 import BtnBack from "../../element/buttons/BtnBack";
 import "./keyboards.css";
@@ -13,20 +14,6 @@ const KeyboardType = () => {
     /* Esto nos devuelve la url de los pokemons, del type que le indiquemos */
     const pokemon = await getTypePokemon(type);
     return setListType(pokemon);
-  };
-
-  const fetchPokemonData = async (url) => {
-    try {
-      const response = await fetch(url);
-      const data = await response.json();
-      const pokemon = {
-        name: data.name,
-      };
-      return pokemon;
-    } catch (error) {
-      console.error("Error fetching Pokemon data:", error);
-      return null;
-    }
   };
 
   useEffect(() => {
