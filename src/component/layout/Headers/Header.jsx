@@ -4,22 +4,24 @@ import { useLocation } from "react-router-dom";
 import "./headers.css";
 
 const Header = () => {
-  const [whats, setWhats] = useState(true);
+  const [whats, setWhats] = useState("");
   const location = useLocation();
 
   useEffect(() => {
     if (location.pathname === "/whatspokemon") {
-      return setWhats(true);
+      return setWhats("¿Como se llama?");
+    } else if (location.pathname === "/findpokemon") {
+      return setWhats("Encuentra mi pareja");
     } else {
-      return setWhats(false);
+      return setWhats("Elije el tipo");
     }
   }, [location]);
 
+  console.log(location.pathname, "location");
+
   return (
     <div className="titleContainer">
-      <h1 className="titlePokemon">
-        {whats ? "¿Como te llamas?" : "Encuentra mi pareja"}
-      </h1>
+      <h1 className="titlePokemon">{whats}</h1>
     </div>
   );
 };

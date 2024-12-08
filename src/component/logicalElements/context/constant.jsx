@@ -1,0 +1,16 @@
+export const TYPES = {
+  ground: "ground",
+  bug: "bug",
+  dark: "dark",
+  electric: "electric",
+  fairy: "fairy",
+  fighting: "fighting",
+  water: "water",
+  ice: "ice",
+  grass: "grass",
+  psychic: "psychic",
+  ghost: "ghost",
+  rock: "rock",
+  fire: "fire",
+  steel: "steel",
+};
