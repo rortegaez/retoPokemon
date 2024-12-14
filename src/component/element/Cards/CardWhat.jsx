@@ -15,8 +15,6 @@ const CardWhats = ({ props, checks }) => {
 
   let type = props.types[0].type.name;
 
-  console.log(type, "type");
-
   return (
     <>
       <div className={`mainCard ${type}`}>

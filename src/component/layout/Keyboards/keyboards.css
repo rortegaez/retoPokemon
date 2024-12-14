@@ -17,6 +17,10 @@
   margin-top: 2vw;
 }
 
+.prueba {
+  background-color: red;
+}
+
 /* ------ */
 .keyboardFind {
   display: grid;
