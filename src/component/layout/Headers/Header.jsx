@@ -17,8 +17,6 @@ const Header = () => {
     }
   }, [location]);
 
-  console.log(location.pathname, "location");
-
   return (
     <div className="titleContainer">
       <h1 className="titlePokemon">{whats}</h1>

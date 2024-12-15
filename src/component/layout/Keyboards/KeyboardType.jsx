@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from "react";
+import Gallery from "react-image-gallery";
+import "react-image-gallery/styles/css/image-gallery.css";
+
 import { BtnType } from "../../element/buttons/BtnType";
 import { getTypePokemon } from "../../logicalElements/enpoint/getPokemon";
 import { fetchPokemonData } from "../../logicalElements/enpoint/typeLogic";
@@ -7,10 +10,11 @@ import BtnBack from "../../element/buttons/BtnBack";
 import "./keyboards.css";
 
 const KeyboardType = () => {
-  const [listType, setListType] = useState([]);
-  const [pokemonData, setPokemonData] = useState([]);
+  const [listType, setListType] = useState([]); //nos da la url de todos los datos del pokemon
+  const [pokemonData, setPokemonData] = useState([]); //nos devuelve el nombre y url de la image
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [showGallery, setShowGallery] = useState(false);
 
   const fetchPokemonType = async (type) => {
     setIsLoading(true);
@@ -44,26 +48,34 @@ const KeyboardType = () => {
     fetchAllPokemonData();
   }, [listType]);
 
+  const handleVisibleGallery = () => {
+    console.log("handlevisible");
+    setShowGallery(!showGallery);
+  };
+
   return (
     <div className="mainContainerKeyboards">
-      <div className="keyboards">
-        <BtnType handleType={fetchPokemonType} />
+      <div className={`keyboards ${showGallery ? "hidden" : ""}`}>
+        <BtnType
+          handleType={fetchPokemonType}
+          handleVisibleGallery={handleVisibleGallery}
+        />
       </div>
       <div className="contBtn">
         <BtnBack />
       </div>
-      <div className="galery">
+      <div className={`galery ${showGallery ? "visible" : "hidden"}`}>
         {isLoading ? (
           <div> Cargando Pokemón..</div>
         ) : error ? (
           <div> Error: {error}</div>
         ) : pokemonData.length > 0 ? (
-          pokemonData.map((poke) => (
-            <div key={poke.name}>
-              <p>{poke.name}</p>
-              <img src={poke.image} alt={poke.name} />
-            </div>
-          ))
+          <Gallery
+            items={pokemonData.map((poke) => ({
+              original: poke.image,
+              thumbnail: poke.image,
+            }))}
+          />
         ) : (
           <div>No hay pokemon disponibles</div>
         )}

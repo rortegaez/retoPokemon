@@ -18,7 +18,15 @@
 }
 
 .galery {
-  background-color: red;
+  width: 40vw;
+  opacity: 0;
+}
+.hidden {
+  display: none;
+}
+.galery.visible {
+  display: block;
+  opacity: 1;
 }
 
 /* ------ */
