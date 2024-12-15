@@ -44,15 +44,15 @@ const KeyboardType = () => {
     fetchAllPokemonData();
   }, [listType]);
 
-  console.log(pokemonData, "data");
-
   return (
     <div className="mainContainerKeyboards">
       <div className="keyboards">
         <BtnType handleType={fetchPokemonType} />
+      </div>
+      <div className="contBtn">
         <BtnBack />
       </div>
-      <div className="prueba">
+      <div className="galery">
         {isLoading ? (
           <div> Cargando Pokemón..</div>
         ) : error ? (
