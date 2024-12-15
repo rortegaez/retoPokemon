@@ -8,7 +8,7 @@ const getPokemon = async (num) => {
 export const getTypePokemon = async (type) => {
   try {
     //esto nos devuelve la url del pokemon donde se encuentran todos los datos
-    const response = await fetch(`http://pokeapi.co/api/v2/type/${type}`)
+    const response = await fetch(`https://pokeapi.co/api/v2/type/${type}`)
 
     const data = await response.json()
 
