@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Gallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 
+import { BtnReturnType } from "../../element/buttons/BtnReturnType";
 import { BtnType } from "../../element/buttons/BtnType";
 import { getTypePokemon } from "../../logicalElements/enpoint/getPokemon";
 import { fetchPokemonData } from "../../logicalElements/enpoint/typeLogic";
@@ -63,6 +64,7 @@ const KeyboardType = () => {
       </div>
       <div className="contBtn">
         <BtnBack />
+        <BtnReturnType handleVisibleGallery={handleVisibleGallery} />
       </div>
       <div className={`galery ${showGallery ? "visible" : "hidden"}`}>
         {isLoading ? (
